@@ -1,0 +1,24 @@
+// resolutions
+$mobile-min-width: 320px;
+$tablet-width: 767px;
+$desktop-width: 1200px;
+
+$retina2x-dpi: 144dpi;
+$retina2x-dppx: 1.5dppx;
+$retina3x-dpi: 288dpi;
+$retina3x-dppx: 3dppx;
+
+/* fonts */
+$default-font: "Calibri-light", "Arial", sans-serif;
+$add-font: "Century-Gothic", "Arial", sans-serif;
+
+// colors
+$main-bg-light: #f8f1ec;
+$main-bg-dark: #6d2416;
+$light: #ffffff;
+$black-text: #161616;
+$black-title: #3f1812;
+$gray-text: #464646;
+
+// цвет ошибки
+$error-color: #ff5a4b;

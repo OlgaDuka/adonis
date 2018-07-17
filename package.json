@@ -1,0 +1,60 @@
+{
+  "name": "Adonis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Проект сайта-визитки компании Adonis",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:OlgaDuka/adonis.git"
+  },
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "7.2.x",
+    "browser-sync": "2.23.x",
+    "del": "^3.0.0",
+    "eslint": "^4.14.0",
+    "eslint-config-htmlacademy": "^0.3.2",
+    "gulp": "3.9.x",
+    "gulp-cache": "^1.0.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "7.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "3.1.x",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.0",
+    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.1.0",
+    "run-sequence": "^2.2.1",
+    "stylelint": "8.4.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "images/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.9"
+  }
+}

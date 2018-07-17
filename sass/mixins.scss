@@ -1,0 +1,31 @@
+@mixin mobile {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width + 1) and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width + 1) {
+    @content;
+  }
+}
+
+@mixin retina($retinaX) {
+  @if $retinaX == 2 {
+    @media (min-resolution: $retina2x-dpi), (min-resolution: $retina2x-dppx) {
+      @content;
+    }
+  }
+
+  @if $retinaX == 3 {
+    @media (min-resolution: $retina3x-dpi), (min-resolution: $retina3x-dppx) {
+      @content;
+    }
+  }
+}
