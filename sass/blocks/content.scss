@@ -1,0 +1,41 @@
+.content {
+  width: 100%;
+}
+
+.content__title {
+  margin-bottom: 35px;
+  color: $black-title;
+  font-size: 23px;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content__text {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-indent: 30px;
+  text-align: justify;
+
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+}
+
+.content__wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.content__wrapper--school {
+
+}
+
+.content__list {
+
+}
+
+.content__item {
+
+}

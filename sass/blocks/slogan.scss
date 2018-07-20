@@ -1,0 +1,27 @@
+.slogan {
+  width: 100%;
+}
+
+.slogan__list {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 70px 100px 80px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slogan__item {
+  width: 200px;
+  height: 140px;
+  padding-top: 40px;
+  font-family: $font-bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: url("../images/wreath.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

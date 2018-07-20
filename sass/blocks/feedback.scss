@@ -1,0 +1,94 @@
+.feedback {
+  width: 100%;
+  padding-top: 40px;
+  background-image: url("../images/form-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.feedback__title {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  font-family: $font-regular;
+  font-size: 23px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback__text {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: $black-text;
+
+  &--conf {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $gray-text;
+  }
+}
+
+.feedback__link {
+  font-family: $font-bold;
+  font-size: 18px;
+  color: $gray-text;
+  text-decoration: none;
+
+  &--conf {
+    font-family: $font-regular;
+    font-size: 14px;
+  }
+}
+
+.feedback__form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__input {
+  width: 100%;
+  max-width: 395px;
+  height: 50px;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border: none;
+  background-color: $light;
+
+  &:nth-of-type(odd) {
+    margin-right: 5px;
+  }
+
+  &:nth-of-type(even) {
+    margin-left: 5px;
+  }
+}
+
+.feedback__textarea {
+  min-height: 300px;
+  margin-bottom: 15px;
+}
+
+.feedback__btn {
+  width: 215px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  color: $light;
+  font-family: $font-regular;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $button-bg;
+}

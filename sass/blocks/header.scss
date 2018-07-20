@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+}
+
+.header__wrap {
+  margin: 0 auto;
+  max-width: $desktop-width;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contact {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+
+  &--right {
+    align-items: flex-end;
+  }
+}
+
+.header__address {
+  color: $black-text;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.header__link-map {
+  font-family: $font-italic;
+  color: $magenta-dark;
+}
+
+.header__phone {
+  font-family: $font-bold;
+  color: $magenta-dark;
+  font-size: 25px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.header__banner {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.header__menu {
+  margin: 0 auto;
+  max-width: $desktop-width;
+}

@@ -10,6 +10,9 @@ $retina3x-dppx: 3dppx;
 
 /* fonts */
 $default-font: "Calibri-light", "Arial", sans-serif;
+$font-regular: "Calibri-regular", "Arial", sans-serif;
+$font-bold: "Calibri-bold", "Arial", sans-serif;
+$font-italic: "Calibri-light-italic", "Arial", sans-serif;
 $add-font: "Century-Gothic", "Arial", sans-serif;
 
 // colors
@@ -19,6 +22,10 @@ $light: #ffffff;
 $black-text: #161616;
 $black-title: #3f1812;
 $gray-text: #464646;
+$magenta-dark: #401812;
+$magenta-light: #a3817b;
+$border-link: #c1afac;
+$button-bg: #5d4441;
 
 // цвет ошибки
 $error-color: #ff5a4b;

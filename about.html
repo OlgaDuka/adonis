@@ -14,13 +14,14 @@
       <div class="header__wrap">
         <div class="header__contact">
           <span class="header__address">КБР, г. Нальчик, ул. Горького, д.28, оф.36</span>
-          <a href="" class="header__link-map">Смотреть на карте</a>
+          <a href="#map" class="header__link-map">Смотреть на карте</a>
         </div>
-        <div class="header__logo"></div>
-        <div class="header__contact">
-          <span class="header__phone">8 903 497 51 00</span>
-          <a href="tel:+79034975100" class="header__phone">+7903 497 51 00</a>
-          <span class="header__schedule"></span>
+        <div class="header__logo">
+          <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="header__contact header__contact--right">
+          <a href="tel:+79034975100" class="header__phone">8 903 497 51 00</a>
+          <span class="header__schedule">Пн-Пт, с 9.00 до 19.00</span>
         </div>
       </div>
       <img src="images/banner.jpg" alt="Правосудие" class="header__banner">
@@ -69,16 +70,16 @@
           <a href="tel:+79034975100" class="feedback__phone">+7903 497 51 00</a> или с помощью формы
         </p>
         <form action="" class="feedback__form">
-          <input class="feedback__input" type="text" id="name" name="name" placeholder="Ваше имя*" required>
-          <label for="name" class="feedback__label">Ваше имя</label>
-          <input class="feedback__input" type="email" id="email" name="email" placeholder="Электронный адрес*" required>
-          <label for="email" class="feedback__label">Электронный адрес</label>
-          <input class="feedback__input" type="text" id="phone" placeholder="Мобильный телефон" name="phone">
-          <label for="phone" class="feedback__label">Мобильный телефон</label>
-          <input class="feedback__input" type="text" id="theme" name="theme" placeholder="Тема сообщения (не обязательно)">
-          <label for="name" class="feedback__label">Тема сообщения (не обязательно)</label>
+          <div class="feedback__wrapper">
+            <input class="feedback__input" type="text" id="name" name="name" placeholder="Ваше имя*" required>
+            <input class="feedback__input" type="email" id="email" name="email" placeholder="Электронный адрес*" required>
+          </div>
+          <div class="feedback__wrapper">
+            <input class="feedback__input" type="text" id="phone" placeholder="Мобильный телефон" name="phone">
+            <input class="feedback__input" type="text" id="theme" name="theme" placeholder="Тема сообщения (не обязательно)">
+          </div>
           <textarea class="feedback__textarea" id="message" name="message"></textarea>
-          <p class="feedback__text">Отправляя эту информацию, вы даете согласие на <a href="https://docs.google.com/document/d/1UczJW0mLSZGzX3D7mpFRmSjFumCM8hHBnsKzls6lF5o/edit#heading=h.p0u1o1gd3baj" class="feedback__link">обработку ваших персональных данных</a></p>
+          <p class="feedback__text feedback__text--conf">Отправляя эту информацию, вы даете согласие на <a href="" class="feedback__link feedback__link--conf">обработку ваших персональных данных</a></p>
           <button class="feedback__btn" type="submit">Отправить</button>
         </form>
       </section>
