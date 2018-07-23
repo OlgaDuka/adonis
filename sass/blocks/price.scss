@@ -1,0 +1,35 @@
+.price {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.price__text {
+  margin-bottom: 20px;
+  font-family: $font-bold;
+  font-size: 20px;
+  color: $note-text;
+
+  span {
+    color: $red-color;
+  }
+}
+
+.price__link {
+  margin-bottom: 30px;
+  font-family: $font-regular;
+  font-size: 18px;
+
+  a {
+    color: $link-blue;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

@@ -20,6 +20,10 @@
   &:last-of-type {
     margin-bottom: 35px;
   }
+
+  span {
+    font-family: $font-bold;
+  }
 }
 
 .content__wrapper {
@@ -31,10 +35,15 @@
     margin-bottom: 80px;
     display: flex;
   }
-}
 
-.content__wrapper--school {
+  &--school {
+    max-width: 410px;
+    padding: 0;
 
+    span {
+      color: $magenta-bright;
+    }
+  }
 }
 
 .content__persona {
