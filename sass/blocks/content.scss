@@ -26,16 +26,38 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding: 0 100px;
+
+  &--img {
+    margin-bottom: 80px;
+    display: flex;
+  }
 }
 
 .content__wrapper--school {
 
 }
 
-.content__list {
+.content__persona {
+  display: flex;
+  flex-direction: column;
+}
 
+.content__list {
+  list-style: none;
 }
 
 .content__item {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-indent: 30px;
+  text-align: justify;
 
+  &::before {
+    content: "— "
+  }
+}
+
+.content__img {
+  align-self: flex-start;
+  margin: 30px 0 30px 100px;
 }

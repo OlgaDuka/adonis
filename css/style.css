@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -514,6 +515,36 @@ input[type=tel] {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 100px; }
+  .content__wrapper--img {
+    margin-bottom: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.content__persona {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.content__list {
+  list-style: none; }
+
+.content__item {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-indent: 30px;
+  text-align: justify; }
+  .content__item::before {
+    content: "— "; }
+
+.content__img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 30px 0 30px 100px; }
 
 .services {
   width: 100%;
