@@ -1,6 +1,13 @@
 .menu {
-  margin-bottom: 50px;
-  padding: 5px 100px;
+  margin: 0 auto;
+  background-color: $light;
+
+  @include desktop {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 5px 0;
+    display: flex;
+  }
 }
 
 .menu--nojs {
@@ -8,14 +15,50 @@
 }
 
 .menu__list {
+  padding: 0 10px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 54px;
+    left: 100%;
+    width: 100vw;
+    height: 1px;
+    border-bottom: 3px solid $magenta-bg-light;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 54px;
+    right: 100%;
+    width: 100vw;
+    height: 1px;
+    border-bottom: 3px solid $magenta-bg-light;
+  }
+
+  @include desktop {
+    width: 1000px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .menu__item {
-  width: 240px;
+  margin-bottom: 10px;
+  min-width: 250px;
+  width: 70vw;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -32,6 +75,17 @@
   }
 
   &:hover {
-    background-color: $magenta-light;
+    background-color: $magenta-bg-light;
+  }
+
+  @include desktop {
+    width: 240px;
+  }
+
+  &--mobile {
+
+    @include desktop {
+      display: none;
+    }
   }
 }

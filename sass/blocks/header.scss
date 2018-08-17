@@ -1,14 +1,75 @@
 .header {
   width: 100%;
+  position: relative;
 }
 
 .header__wrap {
   margin: 0 auto;
   max-width: $desktop-width;
-  padding: 20px 100px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &--mobile {
+    min-width: 320px;
+    display: flex;
+    padding: 10px;
+    border-bottom: 3px solid $magenta-bg-light;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      padding: 20px 100px;
+    }
+  }
+}
+
+.header__btn-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &--close {
+    display: none;
+  }
+}
+
+.header__name {
+  font-family: $add-font;
+  font-size: 17px;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: $main-bg-dark;
+}
+
+.header__icon {
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__contact {
@@ -41,11 +102,30 @@
 }
 
 .header__banner {
-  margin: 0 auto;
-  margin-bottom: 10px;
+  display: none;
+
+  @include desktop {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 }
 
 .header__menu {
-  margin: 0 auto;
   max-width: $desktop-width;
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    margin: 0 auto;
+    width: 100;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: auto;
+    transform: translate(0);
+  }
 }
