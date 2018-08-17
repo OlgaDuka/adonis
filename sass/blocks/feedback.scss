@@ -1,44 +1,73 @@
 .feedback {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
   background-image: url("../images/form-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include desktop {
+    padding-top: 40px;
+  }
 }
 
 .feedback__title {
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-family: $font-regular;
-  font-size: 23px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
+
+  @include desktop {
+    margin-bottom: 15px;
+    font-size: 23px;
+    line-height: 35px;
+  }
 }
 
 .feedback__text {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   color: $black-text;
 
   &--conf {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 13px;
     color: $gray-text;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+    font-size: 15px;
+
+    &--conf {
+      font-size: 14px;
+    }
   }
 }
 
 .feedback__link {
   font-family: $font-bold;
-  font-size: 18px;
+  font-size: 14px;
   color: $gray-text;
   text-decoration: none;
 
   &--conf {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  @include desktop {
+    font-size: 18px;
+
+    &--conf {
+      font-size: 14px;
+    }
   }
 }
 
@@ -53,42 +82,72 @@
 .feedback__wrapper {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .feedback__input {
-  width: 100%;
-  max-width: 395px;
+  margin: 0 auto;
+  width: 95%;
   height: 50px;
   flex-grow: 1;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding-left: 15px;
+  font-family: $font-italic;
+  font-size: 15px;
   border: none;
   background-color: $light;
+  box-shadow: 4px 4px 5px 0 rgba(128, 128, 128, 0.4);
 
-  &:nth-of-type(odd) {
-    margin-right: 5px;
-  }
+  @include desktop {
+    width: 100%;
+    max-width: 395px;
+    margin-bottom: 15px;
 
-  &:nth-of-type(even) {
-    margin-left: 5px;
+    &:nth-of-type(odd) {
+      margin-right: 5px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 5px;
+    }
   }
 }
 
 .feedback__textarea {
-  min-height: 300px;
+  margin: 0 auto;
+  min-height: 225px;
+  width: 95%;
   margin-bottom: 15px;
+  padding: 15px;
+  font-family: $font-italic;
+  font-size: 15px;
+  box-shadow: 4px 4px 5px 0px rgba(128, 128, 128, 0.4);
+
+  @include desktop {
+    min-height: 300px;
+    width: 100%;
+  }
 }
 
 .feedback__btn {
   width: 215px;
-  height: 35px;
+  height: 50px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 15px;
   color: $light;
   font-family: $font-regular;
   font-size: 20px;
   text-transform: uppercase;
   background-color: $button-bg;
   cursor: pointer;
+
+  @include desktop {
+    margin-bottom: 70px;
+    height: 35px;
+  }
 }
