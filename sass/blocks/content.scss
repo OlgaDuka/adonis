@@ -12,23 +12,55 @@
 }
 
 .content__text {
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-indent: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   span {
     font-family: $font-bold;
   }
 
+  &--center {
+    text-indent: 0;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   @include desktop {
     margin-bottom: 15px;
     font-size: 18px;
-    text-indent: 30px;
     text-align: justify;
 
     &:last-of-type {
       margin-bottom: 35px;
     }
+  }
+}
+
+.content__btn-more {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $font-italic;
+  font-size: 16px;
+  color: $main-bg-dark;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.content__text-more {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }
 
@@ -59,17 +91,23 @@
 }
 
 .content__wrapper {
-  width: 70vw;
+  width: 83vw;
   margin: 0 auto;
-
-  @include desktop {
-    max-width: $desktop-width;
-    padding: 0 100px;
-  }
 
   &--img {
     margin-bottom: 80px;
     display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @include desktop {
+    max-width: $desktop-width;
+    padding: 0 100px;
+
+    &--img {
+      margin-bottom: 80px;
+      flex-direction: row;
+    }
   }
 
   &--school {
@@ -92,7 +130,6 @@
 }
 
 .content__item {
-  font-size: 18px;
   margin-bottom: 10px;
   text-indent: 30px;
   text-align: justify;
@@ -100,9 +137,19 @@
   &::before {
     content: "— "
   }
+
+  @include desktop {
+    font-size: 18px;
+  }
 }
 
 .content__img {
-  align-self: flex-start;
-  margin: 30px 0 30px 100px;
+  margin: 15px auto;
+  width: 70vw;
+
+  @include desktop {
+    width: 100%;
+    align-self: flex-start;
+    margin: 30px 0 30px 100px;
+  }
 }
