@@ -39,4 +39,19 @@ $(document).ready(function (e) {
   $('.menu__btn--another').click(function () {
     $('.menu__item--ihilov').slideToggle('slow');
   });
+
+  $('.work').find('.work__btn-more').each(function (i, el) {
+    $(el).click(openText);
+  });
 });
+
+// Функции обработки событий
+function openText() {
+  var services = $(this).parents();
+  $(services[0]).find('.work__text, .work__sublist, .work__subtitle--italic, .work__price').slideToggle(1000);
+  if (this.innerHTML === 'Подробнее...') {
+    $(this).text('Скрыть...');
+  } else {
+    $(this).text('Подробнее...');
+  }
+}

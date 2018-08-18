@@ -1,0 +1,156 @@
+.work {
+  width: 100%;
+}
+
+.work__title {
+  margin: 0 auto 20px;
+  width: 83vw;
+  max-width: 820px;
+  font-family: $font-bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.work__wrapper-bg {
+  width: 100%;
+  padding-top: 20px;
+  background-color: $main-bg-light;
+}
+
+.work__list {
+  width: 83vw;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-top: 25px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    &:last-of-type {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+.work__item {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+
+.work_desc {
+  width: 100%;
+
+  @include desktop {
+    max-width: 420px;
+  }
+}
+
+.work__subtitle {
+  font-family: $font-bold;
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.work__text {
+  font-family: $font-regular;
+  font-size: 18px;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.work__price {
+  font-size: 18px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: none;
+
+  @include desktop {
+    display: block;
+    width: auto;
+  }
+}
+
+.work__btn-more {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $font-italic;
+  font-size: 16px;
+  color: $main-bg-dark;
+  font-weight: 700;
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.work__btn {
+  width: 160px;
+  height: 30px;
+  color: $light;
+  background-color: $magenta-bg-light;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  align-self: flex-end;
+
+  &:hover,
+  &:active {
+    background-color: $main-bg-dark;
+  }
+
+  @include desktop {
+    align-self: flex-start;
+  }
+}
+
+.work__sublist {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.work__subitem {
+  list-style: none;
+}
+
+.work__subitem--red {
+  margin-top: 15px;
+  color: $red-text;
+  font-family: $font-bold;
+}
+
+.work__subtitle--italic {
+  font-family: $font-italic;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

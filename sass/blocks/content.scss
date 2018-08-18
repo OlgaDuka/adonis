@@ -5,10 +5,18 @@
 .content__title {
   margin-bottom: 35px;
   color: $black-title;
-  font-size: 23px;
+  font-size: 21px;
   line-height: 25px;
   text-transform: uppercase;
   text-align: center;
+
+  @include desktop {
+    font-size: 23px;
+  }
+}
+
+.content__red {
+  color: $red-text;
 }
 
 .content__text {
