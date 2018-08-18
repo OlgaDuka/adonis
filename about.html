@@ -56,15 +56,36 @@
         </div>
       </div>
       <img src="images/banner.jpg" alt="Правосудие" class="header__banner">
-      <nav class="header__menu menu menu--nojs">
+      <nav class="header__menu menu menu--mobile">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html">Главная</a></li>
-          <li class="menu__item"><a href="about.html">О компании</a></li>
-          <li class="menu__item menu__item--mobile"><a href="services-fio.html">Услуги для физлиц</a></li>
-          <li class="menu__item menu__item--mobile"><a href="services-ur.html">Услуги для юрлиц</a></li>
+          <li class="menu__item menu__item--active"><a href="#">О компании</a></li>
+          <li class="menu__item"><a href="services-fio.html">Услуги для физлиц</a></li>
+          <li class="menu__item"><a href="services-ur.html">Услуги для юрлиц</a></li>
           <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
-          <li class="menu__item"><a href="another.html">Другая деятельность</a></li>
-          <li class="menu__item menu__item--mobile"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--another" type="button">Другая деятельность</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--ihilov"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__menu menu menu--desktop">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html">Главная</a></li>
+          <li class="menu__item menu__item--active"><a href="#">О компании</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--service" type="button">Услуги</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--service"><a href="services-fio.html">Услуги для физлиц</a></li>
+              <li class="menu__item menu__item--hide menu__item--service"><a href="services-ur.html">Услуги для юрлиц</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--another" type="button">Другая деятельность</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--ihilov"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>

@@ -56,15 +56,36 @@
         </div>
       </div>
       <img src="images/banner.jpg" alt="Правосудие" class="header__banner">
-      <nav class="header__menu menu menu--nojs">
+      <nav class="header__menu menu menu--mobile">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html">Главная</a></li>
           <li class="menu__item"><a href="about.html">О компании</a></li>
-          <li class="menu__item menu__item--mobile"><a href="services-fio.html">Услуги для физлиц</a></li>
-          <li class="menu__item menu__item--mobile"><a href="services-ur.html">Услуги для юрлиц</a></li>
+          <li class="menu__item menu__item--active"><a href="#">Услуги для физлиц</a></li>
+          <li class="menu__item"><a href="services-ur.html">Услуги для юрлиц</a></li>
           <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
-          <li class="menu__item"><a href="another.html">Другая деятельность</a></li>
-          <li class="menu__item menu__item--mobile"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--another" type="button">Другая деятельность</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--ihilov"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__menu menu menu--desktop">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html">Главная</a></li>
+          <li class="menu__item"><a href="about.html">О компании</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--service" type="button">Услуги</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--service menu__item--active"><a href="#">Услуги для физлиц</a></li>
+              <li class="menu__item menu__item--hide menu__item--service"><a href="services-ur.html">Услуги для юрлиц</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
+          <li class="menu__item"><button class="menu__btn menu__btn--another" type="button">Другая деятельность</button>
+            <ul class="menu__sublist">
+              <li class="menu__item menu__item--hide menu__item--ihilov"><a href="top-ihilov.html">Лечение в Израиле</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -250,7 +271,7 @@
         </ul>
       </section>
 
-      <section class="feedback">
+      <section class="feedback desktop-only">
         <h2 class="feedback__title">Задать вопрос,</br> записаться на консультацию</h2>
         <p class="feedback__text">вы можете по электронной почте
           <a href="mailto:info@mkc-adonis.ru" class="feedback__link">info@mkc&#8209;adonis.ru</a>, по&nbsp;номеру&nbsp;
@@ -270,7 +291,7 @@
           <button class="feedback__btn" type="submit">Отправить</button>
         </form>
       </section>
-      <section class="map">
+      <section class="map desktop-only">
         <h2 class="visually-hidden">Карта</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.9663381192445!2d43.59922231571887!3d43.48217287149079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405a06be29103b6b%3A0xf53c7c43609da6f!2z0J7QntCeINCc0JrQpiDCq9CQ0LTQvtC90LjRgcK7IC0g0Y7RgNC40LTQuNGH0LXRgdC60LDRjyDQutC-0LzQv9Cw0L3QuNGP!5e0!3m2!1sru!2sru!4v1532151137538" width="1200" height="463" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
@@ -280,6 +301,7 @@
       <div class="footer__firma">@ OOO "МКЦ Адонис", 2018</div>
       <a class="footer__link" href="">Политика конфиденциальности</a>
     </footer>
+
     <script src="../js/custom.js"></script>
   </body>
 </html>

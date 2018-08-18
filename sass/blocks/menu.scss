@@ -1,17 +1,34 @@
 .menu {
   margin: 0 auto;
+  max-width: $desktop-width;
+  display: flex;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: $light;
 
   @include desktop {
     width: 100%;
     margin-bottom: 50px;
     padding: 5px 0;
-    display: flex;
+    position: relative;
+    top: 0;
+    left: auto;
+    transform: translate(0);
   }
-}
 
-.menu--nojs {
+  &--mobile {
+    display: none;
+  }
 
+  &--desktop {
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
 }
 
 .menu__list {
@@ -25,7 +42,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 54px;
+    bottom: 4px;
     left: 100%;
     width: 100vw;
     height: 1px;
@@ -35,7 +52,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 54px;
+    bottom: 4px;
     right: 100%;
     width: 100vw;
     height: 1px;
@@ -43,7 +60,7 @@
   }
 
   @include desktop {
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
@@ -60,26 +77,38 @@
   min-width: 250px;
   width: 70vw;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: $main-bg-dark;
   cursor: pointer;
 
-  a {
+  a,
+  .menu__btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: $add-font;
     color: $light;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: $magenta-bg-light;
   }
 
-  @include desktop {
-    width: 240px;
+  &--active {
+    background-color: $black-bg;
+
+    &:hover {
+      background-color: $black-bg;
+      cursor: none;
+    }
   }
 
   &--mobile {
@@ -88,4 +117,23 @@
       display: none;
     }
   }
+
+  &--hide {
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: none;
+  }
+
+  @include desktop {
+    width: 230px;
+    min-width: 230px;
+  }
+}
+
+.menu__sublist {
+  padding: 0 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
