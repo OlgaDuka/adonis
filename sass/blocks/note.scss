@@ -1,9 +1,8 @@
 .note {
-  width: 100%;
-  max-width: $desktop-width - 80px;
+  width: 83vw;
   height: auto;
   margin: 30px auto;
-  padding: 30px;
+  padding: 20px 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,11 +12,25 @@
 .note__text {
   margin-bottom: 30px;
   font-family: $font-italic;
-  font-size: 20px;
+  font-size: 15px;
   color: $note-text;
-  text-align: center;
+  text-align: justify;
+
+  @include desktop {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  &--right {
+    align-self: flex-end;
+    font-size: 13px;
+
+    @include desktop {
+      font-size: 17px;
+    }
+  }
 }
 
 .note__img {
-
+  margin-bottom: 20px;
 }

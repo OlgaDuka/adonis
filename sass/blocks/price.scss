@@ -1,8 +1,12 @@
 .price {
   max-width: $desktop-width;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 50px 10px;
   text-align: center;
+
+  @include desktop {
+    padding: 100px 0;
+  }
 }
 
 .price__text {

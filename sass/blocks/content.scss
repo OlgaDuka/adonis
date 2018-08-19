@@ -33,11 +33,21 @@
     font-family: $font-bold;
   }
 
+  &--color {
+    font-size: 17px;
+    font-weight: 700;
+    color: $magenta-bright-text;
+  }
+
   &--center {
     text-indent: 0;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  &--mobile-last {
+    margin-top: 20px;
   }
 
   @include desktop {
@@ -139,15 +149,18 @@
 
 .content__item {
   margin-bottom: 10px;
-  text-indent: 30px;
-  text-align: justify;
 
   &::before {
-    content: "— "
+    content: "- "
   }
 
   @include desktop {
     font-size: 18px;
+    text-indent: 30px;
+
+    &::before {
+      content: "— "
+    }
   }
 }
 

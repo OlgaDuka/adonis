@@ -2,10 +2,12 @@
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .order__wrapper {
-  padding: 70px 50px 10px;
+  margin-bottom: 15px;
+  padding: 70px 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -23,18 +25,27 @@
     top: -26px;
     background-image: url("../images/clip.png");
   }
+
+  @include desktop {
+    padding: 70px 50px 10px;
+  }
 }
 
 .order__title {
   margin-bottom: 60px;
   font-family: $font-regular;
-  font-size: 22px;
+  font-size: 20px;
   color: $magenta-title;
   text-align: center;
+
+  @include desktop {
+    font-size: 22px;
+  }
 }
 
 .order__form {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .order__input {
@@ -72,17 +83,56 @@
 }
 
 .order__text {
+  margin-bottom: 20px;
+  font-size: 14px;
 
+  &--center {
+    text-align: center;
+  }
+
+  @include desktop {
+    font-size: 18px;
+  }
 }
 
 .order__link {
+  font-family: $font-bold;
+  font-size: 15px;
+  color: $black-title;
+  text-decoration: none;
 
+  &:hover,
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include desktop {
+    font-size: 20px;
+
+    &--pers {
+      font-size: 16px;
+    }
+  }
 }
 
 .order__btn {
+  width: 215px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  color: $light;
+  font-family: $font-regular;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $black-title;
+  cursor: pointer;
+  outline: none;
 
-}
+  &:hover {
+    background-color: $magenta-bright-text;
+  }
 
-.order__phone {
-
+  &:active {
+    background-color: $btn-color;
+  }
 }

@@ -659,11 +659,17 @@ input[type=tel] {
     margin-bottom: 0; }
   .content__text span {
     font-family: "Calibri-bold", "Arial", sans-serif; }
+  .content__text--color {
+    font-size: 17px;
+    font-weight: 700;
+    color: #992a2a; }
   .content__text--center {
     text-indent: 0;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px; }
+  .content__text--mobile-last {
+    margin-top: 20px; }
   @media (min-width: 1201px) {
     .content__text {
       margin-bottom: 15px;
@@ -762,14 +768,15 @@ input[type=tel] {
   list-style: none; }
 
 .content__item {
-  margin-bottom: 10px;
-  text-indent: 30px;
-  text-align: justify; }
+  margin-bottom: 10px; }
   .content__item::before {
-    content: "— "; }
+    content: "- "; }
   @media (min-width: 1201px) {
     .content__item {
-      font-size: 18px; } }
+      font-size: 18px;
+      text-indent: 30px; }
+      .content__item::before {
+        content: "— "; } }
 
 .content__img {
   margin: 15px auto;
@@ -782,11 +789,10 @@ input[type=tel] {
       margin: 30px 0 30px 100px; } }
 
 .note {
-  width: 100%;
-  max-width: 1120px;
+  width: 83vw;
   height: auto;
   margin: 30px auto;
-  padding: 30px;
+  padding: 20px 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,15 +809,32 @@ input[type=tel] {
 .note__text {
   margin-bottom: 30px;
   font-family: "Calibri-light-italic", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   color: #7b5651;
-  text-align: center; }
+  text-align: justify; }
+  @media (min-width: 1201px) {
+    .note__text {
+      font-size: 19px;
+      text-align: center; } }
+  .note__text--right {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 13px; }
+    @media (min-width: 1201px) {
+      .note__text--right {
+        font-size: 17px; } }
+
+.note__img {
+  margin-bottom: 20px; }
 
 .price {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 50px 10px;
   text-align: center; }
+  @media (min-width: 1201px) {
+    .price {
+      padding: 100px 0; } }
 
 .price__text {
   margin-bottom: 20px;
@@ -1022,22 +1045,22 @@ input[type=tel] {
   @media (min-width: 1201px) {
     .work__subtitle {
       font-size: 20px; } }
-
-.work__subtitle--italic {
-  font-family: "Calibri-light-italic", "Arial", sans-serif;
-  font-weight: 700;
-  display: none; }
-  @media (min-width: 1201px) {
-    .work__subtitle--italic {
-      display: block; } }
+  .work__subtitle--italic {
+    font-family: "Calibri-light-italic", "Arial", sans-serif;
+    font-weight: 700;
+    display: none; }
+    @media (min-width: 1201px) {
+      .work__subtitle--italic {
+        display: block; } }
 
 .work__text {
   font-family: "Calibri-regular", "Arial", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   display: none; }
   @media (min-width: 1201px) {
     .work__text {
-      display: block; } }
+      display: block;
+      font-size: 18px; } }
 
 .work__price {
   font-size: 18px;
@@ -1046,6 +1069,9 @@ input[type=tel] {
   padding-bottom: 10px;
   text-align: center;
   display: none; }
+  .work__price::after {
+    content: attr(data-note);
+    color: #ff1e00; }
   @media (min-width: 1201px) {
     .work__price {
       display: block;
@@ -1089,7 +1115,11 @@ input[type=tel] {
       display: block; } }
 
 .work__subitem {
-  list-style: none; }
+  list-style: none;
+  font-size: 16px; }
+  @media (min-width: 1201px) {
+    .work__subitem {
+      font-size: 18px; } }
 
 .work__subitem--red {
   margin-top: 15px;
@@ -1243,10 +1273,12 @@ input[type=tel] {
 .order {
   width: 90%;
   max-width: 800px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 30px; }
 
 .order__wrapper {
-  padding: 70px 50px 10px;
+  margin-bottom: 15px;
+  padding: 70px 10px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1270,13 +1302,28 @@ input[type=tel] {
     left: 50px;
     top: -26px;
     background-image: url("../images/clip.png"); }
+  @media (min-width: 1201px) {
+    .order__wrapper {
+      padding: 70px 50px 10px; } }
 
 .order__title {
   margin-bottom: 60px;
   font-family: "Calibri-regular", "Arial", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   color: #763d3d;
   text-align: center; }
+  @media (min-width: 1201px) {
+    .order__title {
+      font-size: 22px; } }
+
+.order__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .order__input {
   width: 100%;
@@ -1302,6 +1349,45 @@ input[type=tel] {
       height: 1px;
       width: 100%;
       border-top: 1px solid #464646; }
+
+.order__text {
+  margin-bottom: 20px;
+  font-size: 14px; }
+  .order__text--center {
+    text-align: center; }
+  @media (min-width: 1201px) {
+    .order__text {
+      font-size: 18px; } }
+
+.order__link {
+  font-family: "Calibri-bold", "Arial", sans-serif;
+  font-size: 15px;
+  color: #3f1812;
+  text-decoration: none; }
+  .order__link:hover, .order__link:active {
+    opacity: 0.5; }
+  @media (min-width: 1201px) {
+    .order__link {
+      font-size: 20px; }
+      .order__link--pers {
+        font-size: 16px; } }
+
+.order__btn {
+  width: 215px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  color: #ffffff;
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #3f1812;
+  cursor: pointer;
+  outline: none; }
+  .order__btn:hover {
+    background-color: #992a2a; }
+  .order__btn:active {
+    background-color: #4e3c3a; }
 
 .map {
   margin: 0 auto;
@@ -1350,3 +1436,40 @@ input[type=tel] {
     .footer__link {
       padding-left: 10px;
       font-size: 16px; } }
+
+.modal__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal {
+  width: 300px;
+  height: 300px;
+  background-color: #ffffff;
+  border: none; }
+  @media (min-width: 1201px) {
+    .modal {
+      width: 400px;
+      height: 400px; } }
+
+.modal__subtitle {
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 18px;
+  color: #401812;
+  text-align: center; }
+  @media (min-width: 1201px) {
+    .modal__subtitle {
+      font-size: 20px; } }
