@@ -1023,6 +1023,14 @@ input[type=tel] {
     .work__subtitle {
       font-size: 20px; } }
 
+.work__subtitle--italic {
+  font-family: "Calibri-light-italic", "Arial", sans-serif;
+  font-weight: 700;
+  display: none; }
+  @media (min-width: 1201px) {
+    .work__subtitle--italic {
+      display: block; } }
+
 .work__text {
   font-family: "Calibri-regular", "Arial", sans-serif;
   font-size: 18px;
@@ -1087,13 +1095,6 @@ input[type=tel] {
   margin-top: 15px;
   color: #ff1e00;
   font-family: "Calibri-bold", "Arial", sans-serif; }
-
-.work__subtitle--italic {
-  font-family: "Calibri-light-italic", "Arial", sans-serif;
-  display: none; }
-  @media (min-width: 1201px) {
-    .work__subtitle--italic {
-      display: block; } }
 
 .feedback {
   width: 100%;

@@ -69,6 +69,16 @@
   }
 }
 
+.work__subtitle--italic {
+  font-family: $font-italic;
+  font-weight: 700;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
 .work__text {
   font-family: $font-regular;
   font-size: 18px;
@@ -144,13 +154,4 @@
   margin-top: 15px;
   color: $red-text;
   font-family: $font-bold;
-}
-
-.work__subtitle--italic {
-  font-family: $font-italic;
-  display: none;
-
-  @include desktop {
-    display: block;
-  }
 }
