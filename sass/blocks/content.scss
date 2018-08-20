@@ -29,6 +29,11 @@
     margin-bottom: 0;
   }
 
+  &::before {
+    content: attr(data-note);
+    color: $red-text;
+  }
+
   span {
     font-family: $font-bold;
   }
@@ -57,6 +62,10 @@
 
     &:last-of-type {
       margin-bottom: 35px;
+    }
+
+    &--center {
+      text-align: center;
     }
   }
 }
@@ -152,6 +161,11 @@
 
   &::before {
     content: "- "
+  }
+
+  &::after {
+    content: attr(data-note);
+    color: $red-text;
   }
 
   @include desktop {
