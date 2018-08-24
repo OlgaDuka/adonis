@@ -1108,7 +1108,8 @@ input[type=tel] {
   border: none;
   outline: none;
   -ms-flex-item-align: end;
-      align-self: flex-end; }
+      align-self: flex-end;
+  cursor: pointer; }
   .work__btn:hover, .work__btn:active {
     background-color: #6d2416; }
   @media (min-width: 1201px) {
@@ -1238,6 +1239,178 @@ input[type=tel] {
     opacity: 0.6; }
   .ihilov__btn:active {
     opacity: 0.3; }
+
+.modal__overlay {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal {
+  display: none;
+  width: 300px;
+  height: 400px;
+  padding-top: 70px;
+  background-color: #ffffff;
+  border: none;
+  position: relative; }
+  @media (min-width: 1201px) {
+    .modal {
+      width: 400px;
+      height: 400px; } }
+
+.modal__btn-cancel {
+  width: 13px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  background-image: url("../images/btn-cancel.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none; }
+
+.modal__wrapper {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .modal__wrapper--order, .modal__wrapper--message {
+    display: none; }
+
+.modal__subtitle {
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 18px;
+  color: #401812;
+  text-align: center; }
+  @media (min-width: 1201px) {
+    .modal__subtitle {
+      font-size: 20px; } }
+
+.modal__phone:-webkit-autofill {
+  border: 1px solid #401812 !important;
+  /* Цвет рамки */
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+  /* Цвет фона */
+  -webkit-text-fill-color: #401812 !important;
+  /* цвет текста */ }
+
+.modal__phone {
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  padding-left: 20px;
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 22px;
+  color: #401812;
+  border: 1px solid #401812;
+  outline: none; }
+
+.modal__btn {
+  width: 215px;
+  height: 50px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #977873;
+  cursor: pointer;
+  outline: none; }
+  .modal__btn:hover {
+    color: #ffffff;
+    background-color: #161616; }
+  .modal__btn:active {
+    background-color: #4e3c3a; }
+
+.modal__text {
+  font-size: 14px;
+  text-align: center; }
+
+.modal__link {
+  font-family: "Calibri-bold", "Arial", sans-serif;
+  font-size: 14px;
+  color: #401812;
+  text-decoration: none; }
+
+.modal__input-box {
+  width: 90%;
+  position: relative; }
+
+.modal__input-box input {
+  padding: 0 0 0 25px;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #992a2a; }
+  @media (min-width: 1201px) {
+    .modal__input-box input:hover {
+      opacity: 0.5; }
+    .modal__input-box input:focus {
+      background: transparent; } }
+
+/*************** -- validate -- *******************/
+.modal__input-box input.error {
+  border: 1px solid #ff5a4b !important; }
+
+.modal__input-box input.error ~ label.error {
+  display: block;
+  margin-left: 5px;
+  font-family: "Calibri-regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff1e00;
+  text-transform: uppercase;
+  text-align: left;
+  position: unset;
+  margin-top: 10px; }
+  @media (min-width: 1201px) {
+    .modal__input-box input.error ~ label.error {
+      position: absolute;
+      left: 0;
+      top: 50px; } }
+
+/*************** -- mask -- *******************/
+.modal__phone--hidden {
+  display: none; }
+
+.modal__input-box--tel {
+  position: relative; }
+
+.modal__phone--visible {
+  position: relative;
+  width: 100%;
+  color: #992a2a; }
+
+.modal__input-box--tel .modal__phone--mask {
+  position: absolute;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.25); }
+
+/*************** -- fix ie11-input -- *******************/
+input::-ms-clear {
+  display: none; }
 
 .feedback {
   width: 100%;
@@ -1549,40 +1722,3 @@ input[type=tel] {
     .footer__link {
       padding-left: 10px;
       font-size: 16px; } }
-
-.modal__overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  overflow: auto;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
-
-.modal {
-  width: 300px;
-  height: 300px;
-  background-color: #ffffff;
-  border: none; }
-  @media (min-width: 1201px) {
-    .modal {
-      width: 400px;
-      height: 400px; } }
-
-.modal__subtitle {
-  font-family: "Calibri-regular", "Arial", sans-serif;
-  font-size: 18px;
-  color: #401812;
-  text-align: center; }
-  @media (min-width: 1201px) {
-    .modal__subtitle {
-      font-size: 20px; } }

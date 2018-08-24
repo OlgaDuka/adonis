@@ -11,11 +11,13 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.2.x",
     "browser-sync": "2.23.x",
+    "cleave": "^1.0.0-alpha.10",
     "del": "^3.0.0",
     "eslint": "^4.14.0",
     "eslint-config-htmlacademy": "^0.3.2",
     "gulp": "3.9.x",
     "gulp-cache": "^1.0.2",
+    "gulp-css-url-adjuster": "^0.2.3",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "1.2.x",
@@ -23,7 +25,6 @@
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "3.1.x",
-    "gulp-css-url-adjuster": "^0.2.3",
     "gulp-strip-debug": "^3.0.0",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
@@ -56,5 +57,8 @@
   ],
   "engines": {
     "node": "8.9"
+  },
+  "dependencies": {
+    "ajv": "^5.5.2"
   }
 }
