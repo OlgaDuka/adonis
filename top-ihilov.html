@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div style="display: none">
@@ -159,6 +159,29 @@
       <div class="footer__firma">@ OOO "МКЦ Адонис", 2018</div>
       <a class="footer__link" href="">Политика конфиденциальности</a>
     </footer>
+
+    <div class="modal__overlay">
+      <form action="" class="modal" id="popup" method="post">
+        <button class="modal__btn-cancel" type="button" name="cancel" id=cancel""></button>
+        <div class="modal__wrapper modal__wrapper--order">
+          <h2 class="visually-hidden">Обратный звонок</h2>
+          <p class="modal__subtitle">Закажите обратный звонок и мы перезвоним Вам в&nbsp;течение 5 минут</p>
+          <div class="modal__input-box modal__input-box--tel" id="phonebox">
+            <input class="modal__phone modal__phone--mask modal__phone--hidden" value="+7 (928) 123 45 67" type="text" disabled>
+            <input class="modal__phone modal__phone--visible" type="tel" name="phone" id="phone" autocomplete="on" value="+7 (" required>
+          </div>
+          <button class="modal__btn modal__btn--submit" type="submit" name="submit">Заказать звонок</button>
+          <p class="modal__text">Отправляя информацию, вы даете
+            <a href="#" target="_blank" class="modal__link">согласие на обработку своих персональных данных</a>
+          </p>
+        </div>
+        <div class="modal__wrapper modal__wrapper--message">
+          <h2 class="modal__title">Ваша заявка отправлена</h2>
+          <p class="modal__subtitle">Мы свяжемся с вами в&nbsp;ближайшее время и ответим на вопросы</p>
+          <button type="button" class="modal__btn modal__btn--close" name="close">Закрыть</button>
+        </div>
+      </form>
+    </div>
 
     <script src="js/jquery.maskedinput.js"></script>
     <script src="js/jquery.validate.js"></script>

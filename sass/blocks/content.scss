@@ -30,6 +30,10 @@
     margin-bottom: 0;
   }
 
+  &--no-indent {
+    text-indent: 0;
+  }
+
   &::before {
     content: attr(data-note);
     color: $red-text;
@@ -178,9 +182,13 @@
     font-size: 18px;
     text-indent: 30px;
 
-    &::before {
-      content: "— "
-    }
+  &--no-indent {
+    text-indent: 0;
+  }
+
+//    &::before {
+//      content: "— "
+//    }
   }
 }
 

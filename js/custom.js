@@ -143,6 +143,9 @@ $(document).ready(function () {
     $(el).click(openPopup);
   });
 
+// Клик по кнопке "Перезвонить вам?"
+  $('.ihilov__btn').click(openPopup);
+
   // Клик по кнопке "Закрыть" на сообщении
   $('.modal__btn--close').click(closePopup);
 

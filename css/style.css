@@ -657,6 +657,8 @@ input[type=tel] {
   text-indent: 30px; }
   .content__text:last-of-type, .content__text--no-margin {
     margin-bottom: 0; }
+  .content__text--no-indent {
+    text-indent: 0; }
   .content__text::before {
     content: attr(data-note);
     color: #ff1e00; }
@@ -786,8 +788,8 @@ input[type=tel] {
     .content__item {
       font-size: 18px;
       text-indent: 30px; }
-      .content__item::before {
-        content: "— "; } }
+      .content__item--no-indent {
+        text-indent: 0; } }
 
 .content__img {
   margin: 15px auto;
@@ -825,6 +827,7 @@ input[type=tel] {
   text-align: justify; }
   @media (min-width: 1201px) {
     .note__text {
+      margin-bottom: 15px;
       font-size: 19px;
       text-align: center; } }
   .note__text--right {
@@ -845,7 +848,7 @@ input[type=tel] {
   text-align: center; }
   @media (min-width: 1201px) {
     .price {
-      padding: 100px 0; } }
+      padding: 80px 0; } }
 
 .price__text {
   margin-bottom: 20px;
@@ -1599,6 +1602,9 @@ input::-ms-clear {
   max-width: 800px;
   margin: 0 auto;
   padding-bottom: 30px; }
+  @media (min-width: 1201px) {
+    .order {
+      padding-bottom: 50px; } }
 
 .order__wrapper {
   margin-bottom: 15px;
@@ -1682,7 +1688,9 @@ input::-ms-clear {
     text-align: center; }
   @media (min-width: 1201px) {
     .order__text {
-      font-size: 18px; } }
+      font-size: 18px; }
+      .order__text--conf {
+        font-size: 14px; } }
 
 .order__link {
   font-family: "Calibri-bold", "Arial", sans-serif;
@@ -1713,6 +1721,9 @@ input::-ms-clear {
     background-color: #992a2a; }
   .order__btn:active {
     background-color: #4e3c3a; }
+  @media (min-width: 1201px) {
+    .order__btn {
+      margin-bottom: 50px; } }
 
 .map {
   margin: 0 auto;

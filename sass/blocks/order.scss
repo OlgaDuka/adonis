@@ -3,6 +3,10 @@
   max-width: 800px;
   margin: 0 auto;
   padding-bottom: 30px;
+
+  @include desktop {
+    padding-bottom: 50px;
+  }
 }
 
 .order__wrapper {
@@ -93,6 +97,10 @@
 
   @include desktop {
     font-size: 18px;
+
+    &--conf {
+      font-size: 14px;
+    }
   }
 }
 
@@ -135,5 +143,9 @@
 
   &:active {
     background-color: $btn-color;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
   }
 }
