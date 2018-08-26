@@ -25,7 +25,8 @@
   line-height: 20px;
   text-indent: 30px;
 
-  &:last-of-type {
+  &:last-of-type,
+  &--no-margin {
     margin-bottom: 0;
   }
 
@@ -128,6 +129,7 @@
   }
 
   @include desktop {
+    width: 100%;
     max-width: $desktop-width;
     padding: 0 100px;
 
@@ -150,6 +152,10 @@
 .content__persona {
   display: flex;
   flex-direction: column;
+
+  .content__text {
+    text-indent: 0;
+  }
 }
 
 .content__list {

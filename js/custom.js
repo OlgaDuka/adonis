@@ -106,26 +106,26 @@ $(document).ready(function () {
 
   // Клик по кнопке меню "гамбургер" на мобильной версии
   $('.header__btn-menu--open').click(function () {
-    $('.menu--mobile').fadeIn(1000);
+    $('.menu--mobile').fadeIn();
     $('.header__btn-menu--open').hide();
     $('.header__btn-menu--close').show();
   });
 
   // Клик по кнопке меню "крестик" на мобильной версии
   $('.header__btn-menu--close').click(function () {
-    $('.menu--mobile').fadeOut(1000);
+    $('.menu--mobile').fadeOut();
     $('.header__btn-menu--open').show();
     $('.header__btn-menu--close').hide();
   });
 
   // Клик по пункту меню "Услуги" на десктопной версии
   $('.menu__btn--service').click(function () {
-    $('.menu__item--service').slideToggle('slow');
+    $('.menu__item--service').slideToggle();
   });
 
   // Клик по пункту меню "Другая деятельность" на десктопной версии
   $('.menu__btn--another').click(function () {
-    $('.menu__item--ihilov').slideToggle('slow');
+    $('.menu__item--ihilov').slideToggle();
   });
 
   // Переключает текст краткий/полный на мобильной версии

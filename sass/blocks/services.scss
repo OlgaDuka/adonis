@@ -1,8 +1,8 @@
 .services {
   width: 100%;
   padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: $main-bg-light;
+  padding-bottom: 40px;
+  background-image: linear-gradient(rgb(248,244,237) 0%, rgb(199,175,171) 100%);
 }
 
 .services__wrapper {
@@ -17,13 +17,13 @@
 .services__title {
   width: 240px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-family: $font-regular;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 35px;
+  color: $note-text;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid $border-link;
 }
 
 .services__list {
@@ -68,8 +68,8 @@
   height: 30px;
   margin-bottom: 25px;
   padding-bottom: 3px;
-  color: $border-link;
-  border: 3px solid $border-link;
+  color: $light-link;
+  border: 3px solid $light-link;
   font-family: $font-bold;
   font-size: 18px;
   align-self: flex-start;
@@ -77,11 +77,14 @@
   text-decoration: none;
 
   &:hover {
-    color: $magenta-bg-light;
-    border-color: $magenta-bg-light;
+    color: $black-text;
+    border-color: $black-text;
+    opacity: 0.7;
   }
 
   &:active {
+    color: $light-link;
+    border-color: $light-link;
     opacity: 0.3;
   }
 }

@@ -7,7 +7,7 @@
   background-size: cover;
 
   @include desktop {
-    padding-top: 40px;
+    padding-top: 50px;
   }
 }
 
@@ -15,13 +15,14 @@
   margin: 0 auto;
   margin-bottom: 10px;
   font-family: $font-regular;
+  color: $black-title;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
 
   @include desktop {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 23px;
     line-height: 35px;
   }
@@ -29,7 +30,7 @@
 
 .feedback__text {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding-left: 50px;
   padding-right: 50px;
   text-align: center;
@@ -55,7 +56,7 @@
 .feedback__link {
   font-family: $font-bold;
   font-size: 14px;
-  color: $gray-text;
+  color: $black-title;
   text-decoration: none;
 
   &--conf {
@@ -105,15 +106,15 @@
 
   @include desktop {
     width: 100%;
-    max-width: 395px;
-    margin-bottom: 15px;
+    max-width: 387px;
+    margin-bottom: 26px;
 
     &:nth-of-type(odd) {
-      margin-right: 5px;
+      margin-right: 13px;
     }
 
     &:nth-of-type(even) {
-      margin-left: 5px;
+      margin-left: 13px;
     }
   }
 }
@@ -129,8 +130,8 @@
   box-shadow: 4px 4px 5px 0px rgba(128, 128, 128, 0.4);
 
   @include desktop {
-    min-height: 300px;
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -144,10 +145,21 @@
   font-size: 20px;
   text-transform: uppercase;
   background-color: $button-bg;
+  opacity: 0.6;
   cursor: pointer;
 
   @include desktop {
-    margin-bottom: 70px;
-    height: 35px;
+    margin-bottom: 55px;
+    height: 45px;
+  }
+
+  &:hover {
+    background-color: $black-title;
+    opacity: 1;
+  }
+
+  &:active {
+    background-color: $button-bg;
+    opacity: 1;
   }
 }
