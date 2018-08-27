@@ -23,15 +23,10 @@
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
-  text-indent: 30px;
 
   &:last-of-type,
   &--no-margin {
     margin-bottom: 0;
-  }
-
-  &--no-indent {
-    text-indent: 0;
   }
 
   &::before {
@@ -44,13 +39,11 @@
   }
 
   &--color {
-    font-size: 17px;
     font-weight: 700;
     color: $magenta-bright-text;
   }
 
   &--center {
-    text-indent: 0;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -72,6 +65,10 @@
     &--center {
       text-align: center;
     }
+
+    &--note {
+      font-size: 16px;
+    }
   }
 }
 
@@ -81,7 +78,6 @@
   font-family: $font-italic;
   font-size: 16px;
   color: $main-bg-dark;
-  font-weight: 700;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -156,10 +152,6 @@
 .content__persona {
   display: flex;
   flex-direction: column;
-
-  .content__text {
-    text-indent: 0;
-  }
 }
 
 .content__list {
@@ -180,11 +172,6 @@
 
   @include desktop {
     font-size: 18px;
-    text-indent: 30px;
-
-  &--no-indent {
-    text-indent: 0;
-  }
 
 //    &::before {
 //      content: "— "

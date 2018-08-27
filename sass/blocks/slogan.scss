@@ -34,7 +34,7 @@
 .slogan__item {
   width: 200px;
   height: 140px;
-  padding-top: 40px;
+  padding-top: 28px;
   font-family: $font-bold;
   font-size: 14px;
   line-height: 20px;
@@ -44,4 +44,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  &:nth-of-type(4) {
+    padding-top: 35px;
+  }
 }

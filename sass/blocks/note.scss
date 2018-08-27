@@ -7,6 +7,10 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0px 2px 5px 0px rgba(128, 128, 128, 0.4);
+
+  @include desktop {
+    max-width: 1100px;
+  }
 }
 
 .note__text {

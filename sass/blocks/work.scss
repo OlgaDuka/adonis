@@ -70,11 +70,13 @@
 
   &--italic {
     font-family: $font-italic;
+    font-size: 16px;
     font-weight: 700;
     display: none;
 
     @include desktop {
       display: block;
+      font-size: 18px;
     }
   }
 }
