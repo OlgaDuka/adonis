@@ -42,6 +42,8 @@
 
 .modal__wrapper {
   height: 80%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,6 +52,15 @@
   &--order,
   &--message {
     display: none;
+  }
+
+  @include desktop {
+    height: 90%;
+    justify-content: space-between;
+
+    &--message {
+      height: 75%;
+    }
   }
 }
 
@@ -160,12 +171,13 @@
   text-transform: uppercase;
   text-align: left;
   position: unset;
-  margin-top: 10px;
+  margin-top: 5px;
 
   @include desktop {
     position: absolute;
     left: 0;
     top: 50px;
+    margin-top: 0;
   }
 }
 

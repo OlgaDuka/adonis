@@ -83,22 +83,6 @@
 .order__label {
   width: 100%;
   font-size: 16px;
-
-/*  &:last-of-type {
-    position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -60px;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      border-top: 1px solid $gray-text;
-    }
-
-  } */
 }
 
 .order__text {

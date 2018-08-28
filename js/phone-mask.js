@@ -4,13 +4,13 @@ $(document).ready(function () {
 
   var HIDDEN_MASK = '+7 (___) ___-__-__';
 
-  var phone = document.querySelector('#phonebox');
-  if (phone) {
-    var input = phone.querySelector('.modal__phone--visible');
-    var mask = phone.querySelector('.modal__phone--mask');
+  var phoneModal = document.querySelector('#phonebox');
+  var phoneFeedback = document.querySelector('.feedback__input-box--tel');
+
+  var phoneMask = function (input, mask, classHidden, classNotEmpty) {
 
     var clickPhoneHandler = function () {
-      mask.classList.remove('modal__phone--hidden');
+      mask.classList.remove(classHidden);
     };
 
     var cleave = new Cleave(input, {
@@ -38,11 +38,27 @@ $(document).ready(function () {
 
     input.addEventListener('blur', function () {
       if (input.value) {
-        input.classList.add('modal__phone--not-empty');
+        input.classList.add(classNotEmpty);
       }
     });
 
     input.addEventListener('input', inputPhoneHandler);
+  };
+
+  if (phoneModal) {
+    var inputModal = phoneModal.querySelector('.modal__phone--visible');
+    var maskModal = phoneModal.querySelector('.modal__phone--mask');
+    var classHidden = 'modal__phone--hidden';
+    var classNotEmpty = 'modal__phone--not-empty';
+    phoneMask(inputModal, maskModal, classHidden, classNotEmpty);
+  }
+
+  if (phoneFeedback) {
+    var inputFeedback = phoneFeedback.querySelector('.feedback__phone--visible');
+    var maskFeedback = phoneFeedback.querySelector('.feedback__phone--mask');
+    classHidden = 'feedback__phone--hidden';
+    classNotEmpty = 'feedback__phone--not-empty';
+    phoneMask(inputFeedback, maskFeedback, classHidden, classNotEmpty);
   }
 
 });

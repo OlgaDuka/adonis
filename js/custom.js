@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
   var desktopWidth = window.matchMedia('(min-width: 1200px)');
+  var feedback = document.querySelector('.feedback__form');
 
   // ******************************* //
   // Функции обработки событий
@@ -25,11 +26,30 @@ $(document).ready(function () {
     }
   };
 
+  var checkValue = function (input) {
+    if (input.value) {
+      input.classList.add('feedback__input--not-empty');
+    }
+  };
+
   // Сбрасывает поле телефона формы и показывает сообщение об успешной отправке
-  var resetForm = function (form) {
+  var resetForm = function (form, resetClassField) {
     form.reset();
+    resetClassField(form);
+  };
+
+  var resetPopup = function (form) {
+    form.querySelector('.modal__phone--mask').classList.add('modal__phone--hidden');
+    form.querySelector('.modal__phone--visible').classList.remove('modal__phone--not-empty');
     $('.modal__wrapper--order').hide();
     $('.modal__wrapper--message').css('display', 'flex');
+  };
+
+  var resetFeedback = function (form) {
+    form.querySelector('.feedback__phone--mask').classList.add('feedback__phone--hidden');
+    form.querySelector('.feedback__phone--visible').classList.remove('feedback__phone--not-empty');
+    $('.feedback__wrapper--main').hide();
+    $('.feedback__wrapper--message').css('display', 'flex');
   };
 
   var openPopup = function (e) {
@@ -46,16 +66,16 @@ $(document).ready(function () {
   };
 
   // Добавляет методы валидации для телефона
-  $.validator.addMethod("minlenghtphone", function (value) {
+  $.validator.addMethod('minlenghtphone', function (value) {
     return value.replace(/\D+/g, '').length > 10;
   }, 'Неверный формат номера!');
 
-  $.validator.addMethod("requiredphone", function (value) {
+  $.validator.addMethod('requiredphone', function (value) {
     return value.replace(/\D+/g, '').length > 1;
   }, 'Заполните это поле!');
 
   // Функция валидации форм
-  var formValidate = function (form) {
+  var formValidate = function (form, resetClassField) {
     form.validate({
       rules: {
         name: {
@@ -70,6 +90,10 @@ $(document).ready(function () {
           requiredphone: true,
           minlenghtphone: true,
           required: true
+        },
+        message: {
+          required: true,
+          minlength: 10
         }
       },
       messages: {
@@ -83,10 +107,14 @@ $(document).ready(function () {
         },
         phone: {
           required: 'Заполните это поле!'
+        },
+        message: {
+          required: 'Заполните это поле!',
+          minlength: 'Слишком короткое сообщение'
         }
       },
-      submitHandler: function (form) {
-        resetForm(form);
+      submitHandler: function () {
+        resetForm(form, resetClassField);
       }
     });
   };
@@ -128,6 +156,16 @@ $(document).ready(function () {
     $('.menu__item--ihilov').slideToggle();
   });
 
+  // Для полей ФОС - событие потери фокуса (для перемещения подписи поля)
+  if (feedback) {
+    var inputs = [].slice.call(feedback.querySelectorAll('.feedback__input'));
+    inputs.forEach(function (elem) {
+      elem.addEventListener('blur', function () {
+        checkValue(elem);
+      });
+    });
+  }
+
   // Переключает текст краткий/полный на мобильной версии
   $('.content__btn-more').each(function (i, el) {
     $(el).click(openContentText);
@@ -152,7 +190,7 @@ $(document).ready(function () {
   // Клик по крестику на модальном окне
   $('.modal__btn-cancel').click(closePopup);
 
-  formValidate($('#popup'));
-  formValidate($('#feedback'));
+  formValidate($('#popup'), resetPopup);
+  formValidate($('#feedback'), resetFeedback);
 
 });
