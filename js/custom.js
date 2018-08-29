@@ -35,21 +35,27 @@ $(document).ready(function () {
   // Сбрасывает поле телефона формы и показывает сообщение об успешной отправке
   var resetForm = function (form, resetClassField) {
     form.reset();
-    resetClassField(form);
+    resetClassField();
   };
 
-  var resetPopup = function (form) {
-    form.querySelector('.modal__phone--mask').classList.add('modal__phone--hidden');
-    form.querySelector('.modal__phone--visible').classList.remove('modal__phone--not-empty');
+  var resetPopup = function () {
+    $('.modal__phone--mask').addClass('modal__phone--hidden');
+    $('.modal__phone--visible').removeClass('modal__phone--not-empty');
     $('.modal__wrapper--order').hide();
     $('.modal__wrapper--message').css('display', 'flex');
   };
 
-  var resetFeedback = function (form) {
-    form.querySelector('.feedback__phone--mask').classList.add('feedback__phone--hidden');
-    form.querySelector('.feedback__phone--visible').classList.remove('feedback__phone--not-empty');
-    $('.feedback__wrapper--main').hide();
-    $('.feedback__wrapper--message').css('display', 'flex');
+  var resetFeedback = function () {
+    $('.feedback__phone--mask').addClass('feedback__phone--hidden');
+    $('.feedback__phone--visible').removeClass('feedback__phone--not-empty');
+    $('.feedback__input').each(function (i, el) {
+      $(el).removeClass('feedback__input--not-empty');
+    });
+    $('.feedback__message').css('display', 'block');
+  };
+
+  var resetOrder = function () {
+    $('.order__message').css('display', 'block');
   };
 
   var openPopup = function (e) {
@@ -78,42 +84,24 @@ $(document).ready(function () {
   var formValidate = function (form, resetClassField) {
     form.validate({
       rules: {
-        name: {
-          required: true,
-          minlength: 3
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        phone: {
-          requiredphone: true,
-          minlenghtphone: true,
-          required: true
-        },
-        message: {
-          required: true,
-          minlength: 10
-        }
+        name: {required: true, minlength: 3},
+        email: {required: true, email: true},
+        phone: {requiredphone: true, minlenghtphone: true, required: true},
+        message: {required: true, minlength: 10},
+        userdata: {required: true, minlength: 10},
+        worktheme: {required: true, minlength: 10},
+        year: {required: true, minlength: 10}
       },
       messages: {
-        name: {
-          required: 'Заполните это поле!',
-          minlength: 'Введите не менее 3 символов'
-        },
-        email: {
-          required: 'Заполните это поле!',
-          email: 'Неверный формат адреса'
-        },
-        phone: {
-          required: 'Заполните это поле!'
-        },
-        message: {
-          required: 'Заполните это поле!',
-          minlength: 'Слишком короткое сообщение'
-        }
+        name: {required: 'Заполните это поле!', minlength: 'Введите не менее 3 символов'},
+        email: {required: 'Заполните это поле!', email: 'Неверный формат адреса'},
+        phone: {required: 'Заполните это поле!'},
+        message: {required: 'Заполните это поле!', minlength: 'Слишком короткое сообщение'},
+        userdata: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'},
+        worktheme: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'},
+        year: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'}
       },
-      submitHandler: function () {
+      submitHandler: function (form) {
         resetForm(form, resetClassField);
       }
     });
@@ -192,5 +180,6 @@ $(document).ready(function () {
 
   formValidate($('#popup'), resetPopup);
   formValidate($('#feedback'), resetFeedback);
+  formValidate($('#order'), resetOrder);
 
 });

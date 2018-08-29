@@ -21,10 +21,8 @@
         	</svg>
         </button>
         <button type="button" class="header__btn-menu header__btn-menu--close">
-          <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53">
-        		<path d="M2,13.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,13.5,2,13.5z" fill="red"/>
-        		<path d="M2,28.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,28.5,2,28.5z" fill="red"/>
-        		<path d="M2,43.5h49c1.104,0,2-0.896,2-2s-0.896-2-2-2H2c-1.104,0-2,0.896-2,2S0.896,43.5,2,43.5z" fill="red"/>
+          <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.176 220.176">
+        		<path d="M131.577,110.084l84.176-84.146c5.897-5.928,5.897-15.565,0-21.492     c-5.928-5.928-15.595-5.928-21.492,0l-84.176,84.146L25.938,4.446c-5.928-5.928-15.565-5.928-21.492,0s-5.928,15.565,0,21.492     l84.146,84.146L4.446,194.26c-5.928,5.897-5.928,15.565,0,21.492c5.928,5.897,15.565,5.897,21.492,0l84.146-84.176l84.176,84.176     c5.897,5.897,15.565,5.897,21.492,0c5.897-5.928,5.897-15.595,0-21.492L131.577,110.084z" fill="#6d2416"/>
         	</svg>
         </button>
         <span class="header__name">МКЦ «АДОНИС»</span>
@@ -135,17 +133,18 @@
       </section>
 
       <section class="order">
-        <form action="" class="order__form">
+        <form action="" class="order__form" id="order">
           <div class="order__wrapper">
             <h2 class="order__title">Заинтересовались этой информацией? Оставьте&nbsp;нам&nbsp;заявку!</h2>
-            <label for="name" class="order__label">Ваше имя, номер для связи:</label>
-            <textarea class="order__textarea" id="name" name="name" required></textarea>
-            <label for="theme" class="order__label">Специализация / тема исследования:</label>
-            <textarea class="order__textarea" id="theme" name="theme" required></textarea>
-            <label for="name" class="order__label">Учебное заведение, год окончания</label>
+            <label for="userdata" class="order__label">Ваше имя, номер для связи:</label>
+            <textarea class="order__textarea" id="userdata" name="userdata" required></textarea>
+            <label for="worktheme" class="order__label">Специализация / тема исследования:</label>
+            <textarea class="order__textarea" id="worktheme" name="worktheme" required></textarea>
+            <label for="year" class="order__label">Учебное заведение, год окончания</label>
             <textarea class="order__textarea" id="year" name="year" required></textarea>
           </div>
           <p class="order__text  order__text--conf order__text--center">Отправляя эту информацию, вы даете согласие на <a href="https://docs.google.com/document/d/1UczJW0mLSZGzX3D7mpFRmSjFumCM8hHBnsKzls6lF5o/edit#heading=h.p0u1o1gd3baj" class="order__link order__link--pers">обработку ваших персональных данных</a></p>
+          <p class="order__message order__message--hidden">Ваша заявка отправлена, спасибо!</p>
           <button class="order__btn" type="submit">Хочу учиться!</button>
         </form>
         <p class="order__text order__text--center">Мы обработаем ваше обращение в&nbsp;кратчайшие&nbsp;сроки.</br> Также вы можете связаться с нами по номеру
