@@ -279,18 +279,39 @@
           <a href="mailto:info@mkc-adonis.ru" class="feedback__link">info@mkc&#8209;adonis.ru</a>, по&nbsp;номеру&nbsp;
           <a href="tel:+79034975100" class="feedback__link">8&nbsp;903&nbsp;497&nbsp;51&nbsp;00</a> или&nbsp;с&nbsp;помощью&nbsp;формы
         </p>
-        <form action="" class="feedback__form">
-          <div class="feedback__wrapper">
-            <input class="feedback__input" type="text" id="name" name="name" placeholder="Ваше имя*" required>
-            <input class="feedback__input" type="email" id="email" name="email" placeholder="Электронный адрес*" required>
+        <form action="" class="feedback__form" id="feedback">
+          <div class="feedback__wrapper feedback__wrapper--main">
+            <div class="feedback__wrap-inner">
+              <div class="feedback__input-box">
+                <input class="feedback__input" type="text" name="name" id="username" autocomplete="on" required>
+                <label class="feedback__label" for="username" data-note="*">Ваше имя</label>
+              </div>
+              <div class="feedback__input-box">
+                <input class="feedback__input" type="text" name="email" id="email" autocomplete="on" required>
+                <label class="feedback__label" for="email" data-note="*">Электронный адрес</label>
+              </div>
+            </div>
+            <div class="feedback__wrap-inner">
+              <div class="feedback__input-box feedback__input-box--tel">
+                <input class="feedback__phone feedback__phone--mask feedback__phone--hidden" value="+7 (928) 123 45 67" type="text" disabled>
+                <input class="feedback__phone feedback__phone--visible" type="tel" name="phone" autocomplete="on" value="+7 (">
+                <span class="feedback__label">Мобильный телефон</span>
+              </div>
+              <div class="feedback__input-box">
+                <input class="feedback__input" type="text" name="theme" autocomplete="off">
+                <label class="feedback__label" for="theme">Тема сообщения</label>
+              </div>
+            </div>
+            <div class="feedback__input-box feedback__input-box--textarea">
+              <textarea class="feedback__input feedback__input--textarea" id="message" name="message" required></textarea>
+              <label class="feedback__label" for="message" data-note="*">Задайте Ваш вопрос</label>
+            </div>
+            <p class="feedback__text feedback__text--conf">Отправляя эту информацию, вы даете согласие на
+              <a href="" target="_blank" class="feedback__link feedback__link--conf">обработку ваших персональных данных</a>
+            </p>
+            <p class="feedback__message">Ваше сообщение успешно отправлено! Благодарим за обращение.</p>
+            <button class="feedback__btn" type="submit">Отправить</button>
           </div>
-          <div class="feedback__wrapper">
-            <input class="feedback__input" type="text" id="phone" placeholder="Мобильный телефон" name="phone">
-            <input class="feedback__input" type="text" id="theme" name="theme" placeholder="Тема сообщения (не обязательно)">
-          </div>
-          <textarea class="feedback__textarea" id="message" name="message" placeholder="Задайте Ваш вопрос*" required></textarea>
-          <p class="feedback__text feedback__text--conf">Отправляя эту информацию, вы даете согласие на <a href="" class="feedback__link feedback__link--conf">обработку ваших персональных данных</a></p>
-          <button class="feedback__btn" type="submit">Отправить</button>
         </form>
       </section>
       <section class="map desktop-only">

@@ -1561,8 +1561,7 @@ input::-ms-clear {
   margin-bottom: 5px; }
   @media (min-width: 1201px) {
     .feedback__input-box {
-      max-width: 387px;
-      margin-bottom: 20px; }
+      max-width: 387px; }
       .feedback__input-box--textarea {
         max-width: 100%; } }
 
