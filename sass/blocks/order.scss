@@ -158,6 +158,8 @@
 }
 
 .order__textarea.error ~ label.error {
+  font-size: 11px;
   color: $red-text;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }

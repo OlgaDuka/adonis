@@ -90,7 +90,7 @@ $(document).ready(function () {
         message: {required: true, minlength: 10},
         userdata: {required: true, minlength: 10},
         worktheme: {required: true, minlength: 10},
-        year: {required: true, minlength: 10}
+        year: {required: true, minlength: 8}
       },
       messages: {
         name: {required: 'Заполните это поле!', minlength: 'Введите не менее 3 символов'},
@@ -99,7 +99,7 @@ $(document).ready(function () {
         message: {required: 'Заполните это поле!', minlength: 'Слишком короткое сообщение'},
         userdata: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'},
         worktheme: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'},
-        year: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 10 символов'}
+        year: {required: 'Заполните это поле!', minlength: 'Здесь не может быть менее 8 символов'}
       },
       submitHandler: function (form) {
         resetForm(form, resetClassField);

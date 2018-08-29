@@ -443,6 +443,8 @@ input[type=tel] {
   .header__btn-menu--open {
     display: block; }
   .header__btn-menu--close {
+    padding-left: 2px;
+    padding-top: 2px;
     display: none; }
 
 .header__name {
@@ -1899,7 +1901,9 @@ input::-ms-clear {
       margin-bottom: 50px; } }
 
 .order__textarea.error ~ label.error {
+  font-size: 11px;
   color: #ff1e00;
+  text-transform: uppercase;
   margin-bottom: 20px; }
 
 .map {
