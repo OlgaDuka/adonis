@@ -4,6 +4,9 @@ $(document).ready(function () {
   var desktopWidth = window.matchMedia('(min-width: 1200px)');
   var feedback = document.querySelector('.feedback__form');
 
+  // Анимация при скроллинге
+  new WOW().init();
+
   // ******************************* //
   // Функции обработки событий
   var openText = function () {
@@ -177,6 +180,13 @@ $(document).ready(function () {
 
   // Клик по крестику на модальном окне
   $('.modal__btn-cancel').click(closePopup);
+
+/*  $('.services__item.animated').hover(function () {
+    $(this).addClass('bounce');
+  },
+  function () {
+    $(this).removeClass('bounce'); // Убираем класс
+  }); */
 
   formValidate($('#popup'), resetPopup);
   formValidate($('#feedback'), resetFeedback);
