@@ -1,148 +1,147 @@
-'use strict';
+"use strict";
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var minify = require('gulp-csso');
-var urlAdjuster = require('gulp-css-url-adjuster');
-var rename = require('gulp-rename');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var uglify = require('gulp-uglify');
-var debug = require('gulp-strip-debug');
-var del = require('del');
-var run = require('run-sequence');
-var server = require('browser-sync').create();
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var plumber = require("gulp-plumber");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var mqpacker = require("css-mqpacker");
 
-gulp.task('style', function () {
-  gulp.src('sass/style.scss')
-      .pipe(plumber())
-      .pipe(sass())
-      .pipe(postcss([
-        autoprefixer({browsers: [
-          'last 2 versions',
-          'IE 11',
-          'Firefox ESR'
-        ]})
-      ]))
-      .pipe(gulp.dest('css'))
-      .pipe(minify())
-      .pipe(rename('style.min.css'))
-      .pipe(gulp.dest('css'))
-      .pipe(server.stream());
+var minify = require("gulp-csso");
+var uglify = require("gulp-uglify");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var svgstore = require("gulp-svgstore");
+var server = require("browser-sync").create();
+var del = require("del");
+var run = require("run-sequence");
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var concat = require('gulp-concat');
+
+var listJsFiles = [
+  'source/js/jquery.min.js',
+  'source/js/wow.min.js',
+  'source/js/jquery.maskedinput.js',
+  'source/js/jquery.validate.js',
+  'source/js/cleave.js',
+  'source/js/phone-mask.js',
+  'source/js/custom.js'
+];
+
+gulp.task("style", function() {
+  gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer({browsers: [
+        "last 1 version",
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Opera versions",
+        "last 2 Edge versions",
+        "IE 11"
+      ]}),
+      mqpacker({
+        sort: true
+      })
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(minify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.reload({stream: true}));
 });
 
-// Оптимизация графики
-gulp.task('images', function() {
-  return gulp.src('img/**/*.{png,jpg,svg,gif}')
-    .pipe(cache(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+// Собирает, минифицирует и записывает в билд
+// скрипты одним файлом
+gulp.task("js", function() {
+  gulp.src(listJsFiles)
+    .pipe(concat('all.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.reload({stream: true}));
+});
+
+// gulp.task("sprite", function () {
+//   return gulp.src("source/img/{icon-*.svg,logo-*.svg}")
+//     .pipe(svgstore({
+//       inlineSvg: true
+//     }))
+//     .pipe(rename("sprite.svg"))
+//     .pipe(gulp.dest("build/img"));
+// });
+
+gulp.task("images", function () {
+  return gulp.src("source/images/*.*")
+    .pipe(imagemin([
+   imageminJpegRecompress({
+     progressive: true,
+     max: 80,
+     min: 70
+   }),
+      imagemin.optipng({optimizationLevel: 5}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
-    ])))
-    .pipe(gulp.dest('images'));
+    ]))
+    .pipe(gulp.dest("build/images"));
 });
 
-// Создание SVG-спрайта с предварительной минификацией
-gulp.task('sprite', function () {
-  return gulp.src('images/svg/*.svg')
-      .pipe(svgmin())
-      .pipe(svgstore({
-        inlineSvg: true
-      }))
-      .pipe(rename('sprite.svg'))
-      .pipe(gulp.dest('images'));
-});
+//gulp.task("html", function () {
+//  return gulp.src("source/**/*.html")
+//    .pipe(posthtml([
+//      include()
+//    ]))
+//    .pipe(gulp.dest("build"));
+//});
 
-// Минификация SVG-файлов вне спрайта
-gulp.task('svg-file', function () {
-  return gulp.src('images/*.svg')
-      .pipe(svgmin())
-      .pipe(gulp.dest('images'));
-});
-
-// Минификация JS-скриптов
-gulp.task('jsmin', function () {
-  return gulp.src(['js/*.js',
-    '!js/*.min.js'])
-      .pipe(debug())
-      .pipe(uglify())
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest('js'));
-});
-
-// Копирование файлов для сборки
-gulp.task('copy', function () {
+gulp.task("copy", function () {
   return gulp.src([
-    'fonts/**',
-    'images/**',
-    '!images/svg{,/**}',
-    '!images/sprite.svg',
-    'js/*.min.js',
-    'css/*.min.css',
-    '*.html'
+    "source/fonts/*.{woff,woff2}",
+    "source/docs/*.pdf",
+    "source/css/style.min.css"
   ], {
-    base: '.'
+    base: "source"
   })
-      .pipe(gulp.dest('build'));
+    .pipe(gulp.dest("build"));
 });
 
-// Копирование файлов для Wordpress (кроме стилей)
-gulp.task('wp', function () {
+gulp.task("clean", function () {
+  return del("build");
+});
+
+gulp.task("copyhtml", function() {
   return gulp.src([
-    'fonts/**',
-    'images/**',
-    '!images/svg{,/**}',
-    '!images/sprite.svg',
-    'js/*.js',
-    '*.html'
+    "source/*.html"
   ], {
-    base: '.'
+    base: "source"
   })
-      .pipe(gulp.dest('Y:/domains/zalman-group/wp-content/themes/zalman-group'));
+  .pipe(gulp.dest("build"))
+  .pipe(server.reload({stream: true}));
 });
 
-// Копирование стилей для Wordpress с заменой путей на изображения и шрифты
-gulp.task('wp-css', function () {
-  return gulp.src('css/style.css').
-  pipe(urlAdjuster({
-    replace: ['../','']
-  }))
-  .pipe(gulp.dest('Y:/domains/zalman-group/wp-content/themes/zalman-group'));
-});
-
-// Очистка билда
-gulp.task('clean', function () {
-  return del('build');
-});
-
-// Cборка билда
-gulp.task('build', function (done) {
-  run(
-      'clean',
-      'style',
-      'jsmin',
-      'copy',
-      done
-  );
-});
-
-gulp.task('serve', ['style'], function () {
+gulp.task("serve", function() {
   server.init({
-    server: '.',
+    server: "build",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
+  gulp.watch("source/styles/**/*.scss", ["style"]);
+  gulp.watch("source/**/*.html", ["copyhtml"]);
+  gulp.watch("source/js/*.js", ["js"]);
+});
 
-  gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('js/*.js').on('change', server.reload);
-  gulp.watch('*.html').on('change', server.reload);
+gulp.task("build", function (done) {
+  run(
+    "clean",
+    "copy",
+    "style",
+    "js",
+    "copyhtml",
+   "images",
+    done
+  );
 });

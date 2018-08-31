@@ -3,7 +3,6 @@
 *.log
 *.pdf
 *.psd
-build
 images/sprite.svg
 node_modules/
 npm-debug.*

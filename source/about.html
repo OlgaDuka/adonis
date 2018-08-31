@@ -5,7 +5,6 @@
     <title>Adonis</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -56,8 +55,8 @@
       <img src="images/banner.jpg" alt="Правосудие" class="header__banner">
       <nav class="header__menu menu menu--mobile">
         <ul class="menu__list">
-          <li class="menu__item menu__item--active"><a href="#">Главная</a></li>
-          <li class="menu__item"><a href="about.html">О компании</a></li>
+          <li class="menu__item"><a href="index.html">Главная</a></li>
+          <li class="menu__item menu__item--active"><a href="#">О компании</a></li>
           <li class="menu__item"><a href="services-fio.html">Услуги для физлиц</a></li>
           <li class="menu__item"><a href="services-ur.html">Услуги для юрлиц</a></li>
           <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
@@ -70,8 +69,8 @@
       </nav>
       <nav class="header__menu menu menu--desktop">
         <ul class="menu__list">
-          <li class="menu__item menu__item--active"><a href="#">Главная</a></li>
-          <li class="menu__item"><a href="about.html">О компании</a></li>
+          <li class="menu__item"><a href="index.html">Главная</a></li>
+          <li class="menu__item menu__item--active"><a href="#">О компании</a></li>
           <li class="menu__item"><button class="menu__btn menu__btn--service" type="button">Услуги</button>
             <ul class="menu__sublist">
               <li class="menu__item menu__item--hide menu__item--service"><a href="services-fio.html">Услуги для физлиц</a></li>
@@ -89,83 +88,45 @@
     </header>
 
     <main class="content">
-      <div class="content__wrapper desktop-only">
-        <h1 class="content__title">Наша миссия</h1>
-        <p class="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="content__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-        <p class="content__text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+      <h1 class="visually-hidden">О компании</h1>
+      <div class="content__wrapper">
+        <h2 class="content__title desktop-only">О нашем центре</h2>
+        <p class="content__text"><span>ООО МКЦ «Адонис» – одна из самых успешных и профессиональных нальчикских юридических фирм.</span> Компания предоставляет юридическую помощь гражданам и организациям практически на всей территории Кабардино-Балкарской республики, Северо-Кавказского и Южного федерального округов. Компания не имеет в своей структуре подразделений, что, однако, не мешает оказывать качественные услуги, в частности, дистанционным способом.</p>
+        <div class="content__text-more">
+          <p class="content__text">Услуги оказываются преимущественно в форме ведения дела в судах, а также юридического сопровождения сделок и проектов, юридической консультации. Основным направлением деятельности ООО МКЦ «Адонис» является <span class="content__text--color">оказание услуг в области права, в области бухгалтерского учета, консультирование по вопросам коммерческой деятельности и управления предприятием</span>, а также оказание информационных услуг, разработка программного обеспечения и консультирование в этой области и многие другие услуги.</p>
+          <p class="content__text"><span>ООО МКЦ «Адонис» — компания полного цикла</span>, предлагающая своим клиентам: юридическую экспертизу документов, правовой анализ ситуации, профессиональную консультацию, досудебное урегулирование проблемы, защиту прав в суде, а также при необходимости сопровождение после завершения судебного процесса.</p>
+          <p class="content__text">Юристы ООО МКЦ «Адонис»:</p>
+          <ul class="content__list">
+            <li class="content__item">обеспечивают представление и защиту интересов клиентов в судах и иных органах власти.</li>
+            <li class="content__item">обеспечивают эффективное решение проблем в сфере: арбитража, взыскания долгов, исполнительного производства, защиты собственности, строительства, недвижимости, земельного права, семейных отношений, ведения наследственных дел, защиты жилищных прав.</li>
+            <li class="content__item">осуществляют информирование клиентов на всех стадиях дела и представляют полный отчет о совершенных в целях оказания юридической помощи действиях. Делают решение юридических вопросов максимально удобными для клиента, создавая единую точку входа, персонального специалиста.</li>
+          </ul>
+          <p class="content__text">В основе эффективности фирмы стоят профессионалы, которые руководствуются принципами специализации и ориентированы на интересы своих клиентов. При выполнении комплекса работ, требующих знаний смежных специалистов , компания привлекает профессионалов других организаций для комплексного и эффективного решения поставленных задач.</p>
+        </div>
+        <button class="content__btn-more mobile-only">Читать далее >></button>
       </div>
-      <div class="content__wrapper mobile-only">
-        <p class="content__text content__text--center content__text--no-margin">Добро пожаловать на сайт нашего</p>
-        <p class="content__text content__text--center content__text--no-margin"><span>консультативного центра!<span></p>
-        <p class="content__text content__text--center">Пожалуйста, выберите интересующий вас раздел:</p>
-        <a href="services-fio.html" class="content__link">Услуги для граждан</a>
-        <p class="content__text content__text--center">или</p>
-        <a href="services-ur.html" class="content__link">Услуги для бизнеса</a>
+      <h2 class="content__title desktop-only">О руководителе</h2>
+      <div class="content__wrapper content__wrapper--img">
+        <div class="content__persona">
+          <p class="content__text">Генеральный директор компании - <span>Зуева Анна Леонидовна, кандидат&nbsp;юридических наук.</span></p>
+          <p class="content__text">В 1997 году уже в качестве второго образования закончила юридический факультет Кабардино-Балкарского государственного университета (КБГУ).</p>
+          <p class="content__text">В 2002 защитила кандидатскую диссертацию в Ижевском государственном университете.</p>
+          <p class="content__text">В период с 2003 по 2009 годы являлась деканом факультета менеджмента и маркетинга и заведующей кафедрой «Правовых дисциплин» в Кабардино-Балкарском институте бизнеса, а с 2008  года — также и руководителем отдела межвузовского сотрудничества.</p>
+          <p class="content__text">В 2008 году — руководитель программы президента КБР по подготовке арбитражных (антикризисных) управляющих.</p>
+          <p class="content__text">Принимала участие во Всероссийских и Международных научно-практических конференциях, участник V всероссийкого форума юристов в Москве.</p>
+          <p class="content__text">Имеет 26 опубликованных печатных работ, среди них: учебник "Судебная экспертиза: понятие и система", монография "Методика расследования экономических преступлений" и др.</p>
+          <p class="content__text">Член института профессиональных бухгалтеров России.</p>
+        </div>
+        <img src="images/photo-anna.jpg" alt="" class="content__img">
       </div>
 
-      <section class="services desktop-only">
-        <div class="services__wrapper">
-          <h2 class="services__title">Услуги для граждан</h2>
-          <ul class="services__list">
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Юридические консультации</h3>
-              <span class="services__price">от <span>2000</span> руб.</span>
-            </li>
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Экспертиза документов</h3>
-              <span class="services__price">от <span>2000</span> руб.</span>
-            </li>
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Сопровождение сделок</h3>
-              <span class="services__price">от <span>5000</span> руб.</span>
-            </li>
-          </ul>
-          <a href="services-fio.html" class="services__link">Полный список услуг</a>
-        </div>
-
-        <div class="services__wrapper">
-          <h2 class="services__title">Услуги для бизнеса</h2>
-          <ul class="services__list">
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Регистрация фирм</h3>
-              <span class="services__price">от <span>5000</span> руб.</span>
-            </li>
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Составление документации</h3>
-              <span class="services__price">от <span>3000</span> руб.</span>
-            </li>
-            <li class="services__item wow zoomIn">
-              <h3 class="services__name">Банкротство</h3>
-              <span class="services__price">от <span>10000</span> руб.</span>
-            </li>
-          </ul>
-          <a href="services-ur.html" class="services__link">Полный список услуг</a>
-        </div>
-      </section>
-
-      <section class="slogan desktop-only wow fadeInDown">
-        <h2 class="visually-hidden">Слоганы</h2>
-        <div class="slogan__wrapper">
-          <p class="slogan__text"><span>Международный консультативный центр «Адонис»</span> - компания с безупречной профессиональной репутацией, основой деятельности которой является помощь людям в юридически сложных жизненных ситуациях, требующих квалифицированного и грамотного подхода.</p>
-          <p class="slogan__text">МКЦ «Адонис» - это:</p>
-          <ul class="slogan__list" data-wow-offset="200">
-            <li class="slogan__item">10 лет</br>успешной</br> работы</li>
-            <li class="slogan__item">Только</br> профессионалы</br> в штате</li>
-            <li class="slogan__item">Полная</br> открытость</br> информации</li>
-            <li class="slogan__item">Доверие</br> наших клиентов</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="feedback">
+      <section class="feedback desktop-only">
         <h2 class="feedback__title mobile-only">Задать вопрос,</br> записаться на консультацию</h2>
         <h2 class="feedback__title desktop-only">Задать вопрос или записаться на консультацию</h2>
         <p class="feedback__text">вы можете по электронной почте
           <a href="mailto:info@mkc-adonis.ru" class="feedback__link">info@mkc&#8209;adonis.ru</a>, по&nbsp;номеру&nbsp;
           <a href="tel:+79034975100" class="feedback__link">8&nbsp;903&nbsp;497&nbsp;51&nbsp;00</a> или&nbsp;с&nbsp;помощью&nbsp;формы
         </p>
-
         <form action="" class="feedback__form" id="feedback">
           <div class="feedback__wrapper feedback__wrapper--main">
             <div class="feedback__wrap-inner">
@@ -181,7 +142,7 @@
             <div class="feedback__wrap-inner">
               <div class="feedback__input-box feedback__input-box--tel">
                 <input class="feedback__phone feedback__phone--mask feedback__phone--hidden" value="+7 (928) 123 45 67" type="text" disabled>
-                <input class="feedback__input feedback__phone feedback__phone--visible" type="tel" name="phone" autocomplete="on" value="+7 (">
+                <input class="feedback__phone feedback__phone--visible" type="tel" name="phone" autocomplete="on" value="+7 (">
                 <span class="feedback__label">Мобильный телефон</span>
               </div>
               <div class="feedback__input-box">
@@ -194,15 +155,14 @@
               <label class="feedback__label" for="message" data-note="*">Задайте Ваш вопрос</label>
             </div>
             <p class="feedback__text feedback__text--conf">Отправляя эту информацию, вы даете согласие на
-              <a href="" target="_blank" class="feedback__link feedback__link--conf">обработку ваших персональных данных</a>
+              <a href="docs/pers.pdf" target="_blank" class="feedback__link feedback__link--conf">обработку ваших персональных данных</a>
             </p>
             <p class="feedback__message">Ваше сообщение успешно отправлено! Благодарим за обращение.</p>
             <button class="feedback__btn" type="submit">Отправить</button>
           </div>
         </form>
       </section>
-
-      <section class="map desktop-only" id="map">
+      <section class="map desktop-only">
         <h2 class="visually-hidden">Карта</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.9663381192445!2d43.59922231571887!3d43.48217287149079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405a06be29103b6b%3A0xf53c7c43609da6f!2z0J7QntCeINCc0JrQpiDCq9CQ0LTQvtC90LjRgcK7IC0g0Y7RgNC40LTQuNGH0LXRgdC60LDRjyDQutC-0LzQv9Cw0L3QuNGP!5e0!3m2!1sru!2sru!4v1532151137538" width="100%" height="463" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
@@ -210,14 +170,9 @@
 
     <footer class="footer">
       <div class="footer__firma">@ OOO "МКЦ Адонис", 2018</div>
-      <a class="footer__link" href="" target="_blank">Политика конфиденциальности</a>
+      <a class="footer__link" href="docs/conf.pdf" target="_blank">Политика конфиденциальности</a>
     </footer>
 
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.maskedinput.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/cleave.js"></script>
-    <script src="js/phone-mask.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/all.min.js"></script>
   </body>
 </html>

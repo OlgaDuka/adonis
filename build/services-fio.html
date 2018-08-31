@@ -5,8 +5,7 @@
     <title>Adonis</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div style="display: none">
@@ -58,8 +57,8 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html">Главная</a></li>
           <li class="menu__item"><a href="about.html">О компании</a></li>
-          <li class="menu__item"><a href="services-fio.html">Услуги для физлиц</a></li>
-          <li class="menu__item menu__item--active"><a href="#">Услуги для юрлиц</a></li>
+          <li class="menu__item menu__item--active"><a href="#">Услуги для физлиц</a></li>
+          <li class="menu__item"><a href="services-ur.html">Услуги для юрлиц</a></li>
           <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
           <li class="menu__item"><button class="menu__btn menu__btn--another" type="button">Другая деятельность</button>
             <ul class="menu__sublist">
@@ -74,8 +73,8 @@
           <li class="menu__item"><a href="about.html">О компании</a></li>
           <li class="menu__item"><button class="menu__btn menu__btn--service" type="button">Услуги</button>
             <ul class="menu__sublist">
-              <li class="menu__item menu__item--hide menu__item--service"><a href="services-fio.html">Услуги для физлиц</a></li>
-              <li class="menu__item menu__item--hide menu__item--service menu__item--active"><a href="#">Услуги для юрлиц</a></li>
+              <li class="menu__item menu__item--hide menu__item--service menu__item--active"><a href="#">Услуги для физлиц</a></li>
+              <li class="menu__item menu__item--hide menu__item--service"><a href="services-ur.html">Услуги для юрлиц</a></li>
             </ul>
           </li>
           <li class="menu__item"><a href="school.html">Школа молодого юриста</a></li>
@@ -90,9 +89,9 @@
 
     <main class="content">
       <div class="content__wrapper">
-        <h1 class="content__title">Услуги для юридических лиц</h1>
-        <p class="content__text">Уважаемые посетители, обратите внимание, что на сайте представлены ознакомительные цены. Окончательная стоимость всех услуг расчитывается индивидуально в зависимости от: сложности, объема работ, вида услуг, области права и пр.</p>
-        <p class="content__text">Примечания: <span class="content__red">*    -   в зависимости от категории спора,       **    -   в зависимости от суда и категории спора</span> </p>
+        <h1 class="content__title">Услуги для физических лиц</h1>
+        <p class="content__text">Уважаемые посетители, обратите внимание, что на сайте представлены ознакомительные цены. Окончательная стоимость всех услуг расчитывается индивидуально в зависимости от сложности.</p>
+        <p class="content__text">Примечание: <span class="content__red">*   -   за исключением административного и уголовного права</span> </p>
       </div>
 
       <section class="work">
@@ -100,46 +99,26 @@
         <ul class="work__list">
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Юридическое сопровождение при регистрации (создании) юридических лиц (ООО, ЗАО, ОАО), индивидуальных предпринимателей, некоммерческих организаций:</p>
-              <ul class="work__sublist">
-                <li class="work__subitem">- Составление всех необходимых форм и учредительных документов.</li>
-                <li class="work__subitem">- Помощь в предоставлении юридического адреса.</li>
-                <li class="work__subitem">- Сопровождение юриста у нотариуса, при открытии накопительного счёта в банке.</li>
-                <li class="work__subitem">- Сопровождение юриста при подаче документов в регистрирующий орган, а также при последующем получении документов из регистрирующего органа.</li>
-                <li class="work__subitem">- Сопровождение юриста при открытии расчётного счёта в банке.</li>
-                <li class="work__subitem">- Получение всех необходимых документов в ПФР, ФСС РФ, Госкомстат(е) и пр. </li>
-              </ul>
+              <p class="work__subtitle">Юридическая консультация, </p>
+              <p class="work__text">способы разрешения проблемных ситуаций, в т. ч. консультации по налоговому, земельному, трудовому, жилищному (включая вопросы приватизации, определения порядка пользования), наследственному, семейному праву.</p>
             </div>
-            <span class="work__price">от <b>5000</b> руб</span>
+            <span class="work__price" data-note="*">от <b>2000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
             <button class="work__btn">Заказать</button>
           </li>
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Юридическое сопровождение при внесении изменений в сведения, содержащиеся в ЕГРЮЛ, ЕГРИП:</p>
-              <ul class="work__sublist">
-                <li class="work__subitem">- Составление всех необходимых форм и учредительных документов.</li>
-                <li class="work__subitem">- Сопровождение юриста у нотариуса.</li>
-                <li class="work__subitem">- Сопровождение юриста при подаче документов в регистрирующий орган, а также при последующем получении документов из регистрирующего органа.</li>
-              </ul>
+              <p class="work__subtitle">Составление претензий, </p>
+              <p class="work__text">ходатайств, заявлений, запросов и иных документов.</p>
             </div>
-            <span class="work__price">от <b>5000</b> руб</span>
+            <span class="work__price" data-note="*">от <b>3000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
             <button class="work__btn">Заказать</button>
           </li>
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Юридическая консультация (устная)</p>
-              <p class="work__text">по вопросам налогового, гражданского (включая земельное, корпоративное, инвестиционное право), трудового, административного, уголовного права.</p>
-            </div>
-            <span class="work__price">от <b>1500</b> руб</span>
-            <button class="work__btn-more mobile-only">Подробнее...</button>
-            <button class="work__btn">Заказать</button>
-          </li>
-          <li class="work__item">
-            <div class="work_desc">
-              <p class="work__subtitle">Работа с любыми видами гражданско-правовых и трудовых договоров:</p>
-              <p class="work__text">составление, корректировка, анализ (письменное заключение).</p>
+              <p class="work__subtitle">Гражданско-правовой договор </p>
+              <p class="work__text">  (купля-продажа, мена, дарение, аренда, соцнайм, подряд, возмездное оказание услуг, рента, долевое участие в строительстве и т. д.): составление, анализ, корректировка, рекомендации.</p>
             </div>
             <span class="work__price">от <b>3000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
@@ -147,8 +126,26 @@
           </li>
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Работа с трудовой документацией:</p>
-              <p class="work__text">составление, корректировка, анализ локальных нормативно-правовых актов (правила внутреннего трудового распорядка, положение об оплате труда и т.д.), должностных инструкций, приказов и пр.</p>
+              <p class="work__subtitle">Трудовой договор: </p>
+              <p class="work__text">составление, анализ, корректировка, рекомендации.</p>
+            </div>
+            <span class="work__price">от <b>3000</b> руб</span>
+            <button class="work__btn-more mobile-only">Подробнее...</button>
+            <button class="work__btn">Заказать</button>
+          </li>
+          <li class="work__item">
+            <div class="work_desc">
+              <p class="work__subtitle">Правовая экспертиза документов</p>
+              <p class="work__text"> (письменное заключение): доверенностей, правоустанавливающих документов на недвижимое имущество (квартира, дом, гараж, земельный участок и т. д.), документов на автотранспортное средство, судебных постановлений (актов), постановлений государственных органов, иного рода документации.</p>
+            </div>
+            <span class="work__price" data-note="*">от <b>5000</b> руб</span>
+            <button class="work__btn-more mobile-only">Подробнее...</button>
+            <button class="work__btn">Заказать</button>
+          </li>
+          <li class="work__item">
+            <div class="work_desc">
+              <p class="work__subtitle">Юридическое сопровождение сделок </p>
+              <p class="work__text">(выезд юриста): дарение, купля-продажа недвижимости, автотранспортного средства, акций, доли в компании и т. п.</p>
             </div>
             <span class="work__price">от <b>5000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
@@ -157,9 +154,9 @@
           <li class="work__item">
             <div class="work_desc">
               <p class="work__subtitle">Юридическое сопровождение оформления права собственности, </p>
-              <p class="work__text">а также получение всех необходимых документов  - кадастрового паспорта, выписок из ЕГРН:</p>
+              <p class="work__text">а также получение всех необходимых документов  - кадастрового паспорта, выписок ЕГРН:</p>
               <ul class="work__sublist">
-                <li class="work__subitem">- на объекты недвижимости и земельные участки (включая постановку на кадастровый учёт).</li>
+                <li class="work__subitem">- на объекты недвижимости: дом, квартиру, земельный участок (включая постановку на кадастровый учёт).</li>
                 <li class="work__subitem work__subitem--red">- на земельные участки, находящиеся в государственной или муниципальной собственности.</li>
               </ul>
             </div>
@@ -169,76 +166,69 @@
           </li>
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Составление документов (вне судебного разбирательства):</p>
-              <p class="work__text">претензий, ходатайств, заявлений, жалоб, запросов (в.ч. адвокатских) и иных документов.</p>
+              <p class="work__subtitle">Досудебное урегулирование споров:</p>
+              <p class="work__text">направление претензий оппоненту, сбор документов, участие в переговорах и пр.</p>
             </div>
-            <span class="work__price">от <b>3000</b> руб</span>
-            <button class="work__btn-more mobile-only">Подробнее...</button>
-            <button class="work__btn">Заказать</button>
-          </li>
-          <li class="work__item">
-            <div class="work_desc">
-              <p class="work__subtitle">Участие в переговорах от имени заказчика:</p>
-              <p class="work__text">досудебное урегулирование споров, согласование условий сделки и т.п.</p>
-            </div>
-            <span class="work__price">от <b>5000</b> руб</span>
+            <span class="work__price">от <b>10000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
             <button class="work__btn">Заказать</button>
           </li>
         </ul>
         <div class="work__wrapper-bg">
-          <h2 class="work__title">Арбитражный процесс</h2>
-          <ul class="work__list work__list--bg">
+          <h2 class="work__title">Гражданское судопроизводство</h2>
+          <ul class="work__list">
             <li class="work__item">
               <div class="work_desc">
-                <p class="work__subtitle">Защита прав и интересов заказчика в суде первой инстанции (арбитражный суд субъекта РФ).</p>
+                <p class="work__subtitle">Защита прав и интересов гражданина в суде первой <i>инстанции</i> (мировой судья, суд общей юрисдикции).</p>
                 <p class="work__subtitle work__subtitle--italic">Полное сопровождение:</p>
                 <ul class="work__sublist">
                   <li class="work__subitem">- Исследование документов, информирование о возможных вариантах решения проблемы.</li>
-                  <li class="work__subitem">- Подготовка необходимых для арбитражного суда документов: заявления, искового заявления, отзыва на исковое заявление, ходатайств, запросов и т.п.</li>
-                  <li class="work__subitem">- Подача искового заявления, отзыва на исковое заявление в арбитражный суд.</li>
-                  <li class="work__subitem">- Представительство в арбитражном суде: предварительное судебное заседание, разбирательство по существу.</li>
-                  <li class="work__subitem">- Получение судебного акта, информирование о дальнейших действиях.</li>
+                  <li class="work__subitem">- Подготовка необходимых для суда документов: заявления, искового заявления, возражений, ходатайств, запросов и т.п.</li>
+                  <li class="work__subitem">- Подача заявления, искового заявления, возражений на исковое заявление в суд.</li>
+                  <li class="work__subitem">- Представительство в суде: досудебная подготовка, разбирательство по существу.</li>
+                  <li class="work__subitem">- Получение судебного постановления, информирование о дальнейших действиях.</li>
                 </ul>
               </div>
-              <span class="work__price" data-note="*">от <b>20000</b> руб</span>
+              <span class="work__price">от <b>15000</b> руб</span>
               <button class="work__btn-more mobile-only">Подробнее...</button>
               <button class="work__btn">Заказать</button>
             </li>
             <li class="work__item">
               <div class="work_desc">
-                <p class="work__subtitle">Защита прав и интересов заказчика в суде второй инстанции (арбитражный апелляционный суд):</h3>
+                <h3 class="work__subtitle">Защита прав и интересов гражданина в суде второй инстанции (кассация, апелляция).</h3>
+                <h3 class="work__subtitle work__subtitle--italic">Полное сопровождение:</h3>
                 <ul class="work__sublist">
                   <li class="work__subitem">- Ознакомление с материалами дела.</li>
-                  <li class="work__subitem">- Составление и подача апелляционной жалобы на решение арбитражного суда (отзыва на жалобу).</li>
-                </ul>
-              </div>
-              <span class="work__price" data-note="*">от <b>25000</b> руб</span>
-              <button class="work__btn-more mobile-only">Подробнее...</button>
-              <button class="work__btn">Заказать</button>
-            </li>
-            <li class="work__item">
-              <div class="work_desc">
-                <p class="work__subtitle">Защита прав и интересов заказчика в суде кассационной инстанции (федеральный арбитражный суд округа):</p>
-                <ul class="work__sublist">
-                  <li class="work__subitem">- Ознакомление с материалами дела.</li>
-                  <li class="work__subitem">- Составление и подача кассационной жалобы на решение арбитражного суда и/или постановление арбитражного апелляционного суда (отзыва на жалобу).</li>
+                  <li class="work__subitem">- Составление и подача жалобы на судебное постановление (возражений на жалобу).</li>
                   <li class="work__subitem">- Представительство в судебном заседании.</li>
                 </ul>
               </div>
-              <span class="work__price" data-note="*">от <b>25000</b> руб</span>
+              <span class="work__price">от <b>20000</b> руб</span>
               <button class="work__btn-more mobile-only">Подробнее...</button>
               <button class="work__btn">Заказать</button>
             </li>
             <li class="work__item">
               <div class="work_desc">
-                <p class="work__subtitle">Защита прав и интересов заказчика в суде надзорной инстанции (Высший арбитражный  суд РФ):</p>
+                <h3 class="work__subtitle">Защита прав и интересов гражданина в суде <i>первой и второй инстанций.</i></h3>
+                <h3 class="work__subtitle work__subtitle--italic">Разовый выход юриста (адвоката):</h3>
+                <ul class="work__sublist">
+                  <li class="work__subitem">- Ознакомление с материалами дела.</li>
+                  <li class="work__subitem">- Участие в судебном заседании.</li>
+                </ul>
+              </div>
+              <span class="work__price">от <b>5000</b> руб</span>
+              <button class="work__btn-more mobile-only">Подробнее...</button>
+              <button class="work__btn">Заказать</button>
+            </li>
+            <li class="work__item">
+              <div class="work_desc">
+                <h3 class="work__subtitle">Защита прав и интересов гражданина в суде <i>надзорной инстанции</i> (суд субъекта РФ, Верховный суд РФ):</h3>
                 <ul class="work__sublist">
                   <li class="work__subitem">- Составление и подача надзорной жалобы.</li>
                   <li class="work__subitem">- Представительство в судебном заседании.</li>
                 </ul>
               </div>
-              <span class="work__price" data-note="*">от <b>25000</b> руб</span>
+              <span class="work__price">от <b>15000</b> руб</span>
               <button class="work__btn-more mobile-only">Подробнее...</button>
               <button class="work__btn">Заказать</button>
             </li>
@@ -247,18 +237,50 @@
         <ul class="work__list">
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Защита прав и интересов заказчика в третейском суде, включая международный коммерческий арбитраж.</p>
-              <p class="work__subtitle work__subtitle--italic">Полное сопровождение.</p>
+              <h3 class="work__subtitle">Исполнительное производство:</h3>
+              <ul class="work__sublist">
+                <li class="work__subitem">- Получение исполнительного листа в суде и подача исполнительного листа в Службу судебных приставов-исполнителей с целью возбуждения исполнительного производства.</li>
+                <li class="work__subitem">- Контроль за ходом исполнительного производства.</li>
+                <li class="work__subitem">- Обжалование действий (бездействий) судебных приставов-исполнителей.</li>
+                <li class="work__subitem">- Иные услуги.</li>
+              </ul>
             </div>
-            <span class="work__price" data-note="**">По согласованию</span>
+            <span class="work__price">от <b>15000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
             <button class="work__btn">Заказать</button>
           </li>
           <li class="work__item">
             <div class="work_desc">
-              <p class="work__subtitle">Абонентское обслуживание.</p>
+              <p class="work__subtitle">Направление адвокатских запросов </p>
+              <p class="work__text">в государственные органы и учреждения, коммерческие и некоммерческие организации, а также физическим лицам с целью получения необходимой для разрешения спора информации.</p>
             </div>
-            <span class="work__price">По согласованию</span>
+            <span class="work__price">от <b>5000</b> руб</span>
+            <button class="work__btn-more mobile-only">Подробнее...</button>
+            <button class="work__btn">Заказать</button>
+          </li>
+          <li class="work__item">
+            <div class="work_desc">
+              <h3 class="work__subtitle">Уголовный процесс. Защита прав гражданина (свидетеля, потерпевшего, подозреваемого, обвиняемого) во время предварительного следствия.</h3>
+              <h3 class="work__subtitle work__subtitle--italic">Полное сопровождение:</h3>
+              <ul class="work__sublist">
+                <li class="work__subitem">- Изучение материалов уголовного дела.</li>
+                <li class="work__subitem">- Сбор всех необходимых документов, направление адвокатского запроса.</li>
+                <li class="work__subitem">- Составление и заявление ходатайств, жалоб.</li>
+                <li class="work__subitem">- Участие в проведении допросов, очных ставок и т.д.</li>
+                <li class="work__subitem">- Посещение обвиняемого в следственном изоляторе.</li>
+                <li class="work__subitem">- Иные услуги.</li>
+              </ul>
+            </div>
+            <span class="work__price">от <b>45000</b> руб</span>
+            <button class="work__btn-more mobile-only">Подробнее...</button>
+            <button class="work__btn">Заказать</button>
+          </li>
+          <li class="work__item">
+            <div class="work_desc">
+              <p class="work__subtitle">Защита прав гражданина в Европейском суде по правам человека (Страсбург, Франция):</p>
+              <p class="work__text">составление и подача жалобы, представительство в суде.</p>
+            </div>
+            <span class="work__price">от <b>5000</b> руб</span>
             <button class="work__btn-more mobile-only">Подробнее...</button>
             <button class="work__btn">Заказать</button>
           </li>
@@ -280,6 +302,7 @@
           <a href="mailto:info@mkc-adonis.ru" class="feedback__link">info@mkc&#8209;adonis.ru</a>, по&nbsp;номеру&nbsp;
           <a href="tel:+79034975100" class="feedback__link">8&nbsp;903&nbsp;497&nbsp;51&nbsp;00</a> или&nbsp;с&nbsp;помощью&nbsp;формы
         </p>
+
         <form action="" class="feedback__form" id="feedback">
           <div class="feedback__wrapper feedback__wrapper--main">
             <div class="feedback__wrap-inner">
@@ -314,6 +337,7 @@
             <button class="feedback__btn" type="submit">Отправить</button>
           </div>
         </form>
+
       </section>
       <section class="map desktop-only">
         <h2 class="visually-hidden">Карта</h2>
@@ -323,7 +347,7 @@
 
     <footer class="footer">
       <div class="footer__firma">@ OOO "МКЦ Адонис", 2018</div>
-      <a class="footer__link" href="">Политика конфиденциальности</a>
+      <a class="footer__link" href="docs/conf.pdf">Политика конфиденциальности</a>
     </footer>
 
     <div class="modal__overlay">
@@ -338,7 +362,7 @@
           </div>
           <button class="modal__btn modal__btn--submit" type="submit" name="submit">Заказать звонок</button>
           <p class="modal__text">Отправляя информацию, вы даете
-            <a href="#" target="_blank" class="modal__link">согласие на обработку своих персональных данных</a>
+            <a href="docs/pers.pdf" target="_blank" class="modal__link">согласие на обработку своих персональных данных</a>
           </p>
         </div>
         <div class="modal__wrapper modal__wrapper--message">
@@ -349,11 +373,6 @@
       </form>
     </div>
 
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.maskedinput.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/cleave.js"></script>
-    <script src="js/phone-mask.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/all.min.js"></script>
   </body>
 </html>
