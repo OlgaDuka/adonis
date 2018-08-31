@@ -54,7 +54,8 @@ $(document).ready(function () {
     $('.feedback__input').each(function (i, el) {
       $(el).removeClass('feedback__input--not-empty');
     });
-    $('.feedback__message').css('display', 'block');
+    $('.feedback__btn').removeClass('feedback__btn--active');
+    $('.feedback__message').show();
   };
 
   var resetOrder = function () {
@@ -180,6 +181,16 @@ $(document).ready(function () {
 
   // Клик по крестику на модальном окне
   $('.modal__btn-cancel').click(closePopup);
+
+  // Фокус в поле формы
+  $('.feedback__input').focus(function () {
+    $('.feedback__message').hide();
+    $('.feedback__btn').addClass('feedback__btn--active');
+  });
+
+  $('.feedback__form').blur(function () {
+    $('.feedback__btn').removeClass('feedback__btn--active');
+  });
 
 /*  $('.services__item.animated').hover(function () {
     $(this).addClass('bounce');

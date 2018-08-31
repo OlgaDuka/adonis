@@ -8,11 +8,11 @@ $(document).ready(function () {
   var phoneFeedback = document.querySelector('.feedback__input-box--tel');
 
   var phoneMask = function (input, mask, classHidden, classNotEmpty) {
-
+    // Делаем маску телефона видимой
     var clickPhoneHandler = function () {
       mask.classList.remove(classHidden);
     };
-
+    // Инициализируем объект для показа маски
     var cleave = new Cleave(input, {
       blocks: [3, 3, 3, 2, 2],
       delimiters: ['(', ') ', '-', '-'],
@@ -20,7 +20,7 @@ $(document).ready(function () {
       prefix: '+7 ',
       numericOnly: true
     });
-
+    // Ввод символа в поле телефона
     var inputPhoneHandler = function (evt) {
       var newValue = input.value;
       mask.value = newValue + HIDDEN_MASK.substr(newValue.length);
@@ -33,15 +33,15 @@ $(document).ready(function () {
         }
       }
     };
-
+    // Клик в поле телефона
     input.addEventListener('click', clickPhoneHandler);
-
+    // Событие потери фокуса
     input.addEventListener('blur', function () {
-      if (input.value) {
+      if (input.value && (input.value !== '+7 (')) {
         input.classList.add(classNotEmpty);
       }
     });
-
+    // Ввод символа в поле телефона
     input.addEventListener('input', inputPhoneHandler);
   };
 
