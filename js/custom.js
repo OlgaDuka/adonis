@@ -59,7 +59,7 @@ $(document).ready(function () {
   };
 
   var resetOrder = function () {
-    $('.order__message').css('display', 'block');
+    $('.order__message').show();
   };
 
   var openPopup = function (e) {
@@ -182,10 +182,15 @@ $(document).ready(function () {
   // Клик по крестику на модальном окне
   $('.modal__btn-cancel').click(closePopup);
 
-  // Фокус в поле формы
+  // Фокус в поле ФОС
   $('.feedback__input').focus(function () {
     $('.feedback__message').hide();
     $('.feedback__btn').addClass('feedback__btn--active');
+  });
+
+  // Фокус в поле Заявки на странице Школы
+  $('.order__textarea').focus(function () {
+    $('.order__message').hide();
   });
 
   $('.feedback__form').blur(function () {
