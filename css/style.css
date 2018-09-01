@@ -529,14 +529,11 @@ input[type=tel] {
   .header__wrap--desktop {
     display: none; }
 
-.header__logo:hover {
+.header__logo a:hover {
   opacity: 0.5; }
 
-.header__logo:active {
+.header__logo a:active {
   opacity: 0.2; }
-
-.header__logo--main:hover, .header__logo--main:active {
-  opacity: 1; }
 
 .header__btn-menu {
   background-color: transparent;
