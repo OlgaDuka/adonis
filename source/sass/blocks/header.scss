@@ -31,6 +31,17 @@
   }
 }
 
+.header__logo {
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
 .header__btn-menu {
   background-color: transparent;
   border: none;
