@@ -40,6 +40,13 @@
   &:active {
     opacity: 0.2;
   }
+
+  &--main {
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .header__btn-menu {

@@ -535,6 +535,9 @@ input[type=tel] {
 .header__logo:active {
   opacity: 0.2; }
 
+.header__logo--main:hover, .header__logo--main:active {
+  opacity: 1; }
+
 .header__btn-menu {
   background-color: transparent;
   border: none;
