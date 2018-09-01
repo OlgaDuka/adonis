@@ -1260,23 +1260,6 @@ input[type=tel] {
   position: unset;
   margin-top: 5px; }
 
-/*************** -- mask -- *******************/
-.modal__phone--hidden {
-  display: none; }
-
-.modal__input-box--tel {
-  position: relative; }
-
-.modal__phone--visible {
-  position: relative;
-  width: 100%;
-  color: #992a2a; }
-
-.modal__input-box--tel .modal__phone--mask {
-  position: absolute;
-  width: 100%;
-  color: rgba(0, 0, 0, 0.25); }
-
 /*************** -- fix ie11-input -- *******************/
 input::-ms-clear {
   display: none; }
@@ -1316,7 +1299,8 @@ input::-ms-clear {
   font-family: "Calibri-bold", "Arial", sans-serif;
   font-size: 14px;
   color: #3f1812;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
   .feedback__link--conf {
     font-size: 13px; }
 
@@ -1344,7 +1328,6 @@ input::-ms-clear {
   position: relative;
   margin-bottom: 5px; }
 
-.feedback__phone,
 .feedback__input {
   margin: 0 auto;
   width: 100%;
@@ -1356,7 +1339,6 @@ input::-ms-clear {
   border: none;
   background-color: #ffffff;
   box-shadow: 4px 4px 5px 0 rgba(128, 128, 128, 0.4); }
-  .feedback__phone--textarea,
   .feedback__input--textarea {
     height: 225px;
     min-height: 225px;
@@ -1431,36 +1413,10 @@ input::-ms-clear {
   text-transform: uppercase;
   text-align: right; }
 
-.feedback__input-box .feedback__phone:focus ~ span,
-.feedback__phone--not-empty ~ span {
-  top: -12px;
-  right: 4px;
-  font-size: 8px;
-  line-height: 15px;
-  text-transform: uppercase;
-  text-align: right; }
-
-.feedback__input-box .feedback__phone {
-  color: transparent; }
-
-.feedback__input-box .feedback__phone:focus,
-.feedback__input-box .feedback__phone--not-empty {
-  color: #464646; }
-
 .feedback__input-box input,
 .feedback__input-box .feedback__input--textarea {
   outline: none; }
 
-/* .feedback__input-box .feedback__input:focus ~ .feedback__message,
-.feedback__input-box .feedback__phone:focus ~ .feedback__message {
-  display: none;
-}
-
-.feedback__input-box .feedback__input:focus ~ .feedback__btn,
-.feedback__input-box .feedback__phone:focus ~ .feedback__btn {
-  background-color: $black-title;
-  opacity: 1;
-} */
 .feedback__input-box input:-webkit-autofill {
   border: 1px solid transparent;
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
@@ -1470,43 +1426,6 @@ input::-ms-clear {
 
 .feedback__input-box input:-webkit-autofill ~ label {
   color: #464646; }
-
-/*.feedback__message-close {
-  align-self: center;
-
-  @include heliosc-regular;
-  color: $blue-text;
-  font-size: 16px;
-  line-height: 25px;
-
-  border: none;
-  outline: 1px solid transparent;
-  background-color: transparent;
-  background-image: linear-gradient(rgba($blue-text, 0.25), rgba($blue-text, 0.25));
-  background-position: 0 1.31em;
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  cursor: pointer;
-
-  &:hover {
-    color: $orange-bg;
-    background-image: linear-gradient(rgba($orange-bg, 0.25), rgba($orange-bg, 0.25));
-  }
-} */
-/*************** -- mask -- *******************/
-.feedback__phone--hidden {
-  display: none; }
-
-.feedback__input-box--tel {
-  position: relative; }
-
-.feedback__phone--visible {
-  position: relative;
-  color: #992a2a; }
-
-.feedback__input-box .feedback__phone--mask {
-  position: absolute;
-  color: rgba(0, 0, 0, 0.25); }
 
 /*************** -- fix ie11-input -- *******************/
 input::-ms-clear {
@@ -1797,11 +1716,9 @@ input::-ms-clear {
       max-width: 387px; }
       .feedback__input-box--textarea {
         max-width: 100%; }
-    .feedback__phone,
     .feedback__input {
       max-width: 387px;
       margin-bottom: 26px; }
-      .feedback__phone--textarea,
       .feedback__input--textarea {
         max-width: 100%;
         margin-bottom: 30px; }
