@@ -9,9 +9,9 @@
 
 .footer__firma {
   color: $light;
+  padding-left: 5px;
   padding-right: 5px;
   font-size: 12px;
-  border-right: 1px solid $border-link;
 
   @include desktop {
     padding-right: 10px;
@@ -21,9 +21,11 @@
 
 .footer__link {
   padding-left: 5px;
+  padding-right: 5px;
   color: $light;
   font-size: 12px;
   text-decoration: none;
+  border-left: 1px solid $border-link;
 
   &:hover {
     opacity: 0.6;
@@ -35,6 +37,7 @@
 
   @include desktop {
     padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
   }
 }

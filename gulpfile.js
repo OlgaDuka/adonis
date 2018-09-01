@@ -17,6 +17,7 @@ var del = require("del");
 var run = require("run-sequence");
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var concat = require('gulp-concat');
+var ghPages = require('gulp-gh-pages');
 
 var listJsFiles = [
   'source/js/jquery.min.js',
@@ -129,7 +130,7 @@ gulp.task("serve", function() {
     cors: true,
     ui: false
   });
-  gulp.watch("source/styles/**/*.scss", ["style"]);
+  gulp.watch("source/sass/**/*.scss", ["style"]);
   gulp.watch("source/**/*.html", ["copyhtml"]);
   gulp.watch("source/js/*.js", ["js"]);
 });
@@ -144,4 +145,9 @@ gulp.task("build", function (done) {
    "images",
     done
   );
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });

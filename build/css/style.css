@@ -1618,15 +1618,17 @@ input::-ms-clear {
 
 .footer__firma {
   color: #ffffff;
+  padding-left: 5px;
   padding-right: 5px;
-  font-size: 12px;
-  border-right: 1px solid #c1afac; }
+  font-size: 12px; }
 
 .footer__link {
   padding-left: 5px;
+  padding-right: 5px;
   color: #ffffff;
   font-size: 12px;
-  text-decoration: none; }
+  text-decoration: none;
+  border-left: 1px solid #c1afac; }
   .footer__link:hover {
     opacity: 0.6; }
   .footer__link:active {
@@ -1826,6 +1828,7 @@ input::-ms-clear {
       font-size: 16px; }
     .footer__link {
       padding-left: 10px;
+      padding-right: 10px;
       font-size: 16px; } }
   @media (prefers-reduced-motion) {
   .animated {

@@ -1,8 +1,8 @@
 .DS_Store
 *.ai
 *.log
-*.pdf
 *.psd
+.publish
 images/sprite.svg
 node_modules/
 npm-debug.*
