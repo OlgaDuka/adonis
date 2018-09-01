@@ -173,15 +173,14 @@
                 <label class="feedback__label" for="username" data-note="*">Ваше имя</label>
               </div>
               <div class="feedback__input-box">
-                <input class="feedback__input" type="text" name="email" id="email" autocomplete="on" required>
+                <input class="feedback__input" type="email" name="email" id="email" autocomplete="on" required>
                 <label class="feedback__label" for="email" data-note="*">Электронный адрес</label>
               </div>
             </div>
             <div class="feedback__wrap-inner">
-              <div class="feedback__input-box feedback__input-box--tel">
-                <input class="feedback__phone feedback__phone--mask feedback__phone--hidden" value="+7 (928) 123 45 67" type="text" disabled>
-                <input class="feedback__input feedback__phone feedback__phone--visible" type="tel" name="phone" autocomplete="on" value="+7 (" aria-label="Phone number input">
-                <span class="feedback__label">Мобильный телефон</span>
+              <div class="feedback__input-box">
+                <input class="feedback__input" type="tel" name="phone" id="phone" autocomplete="on">
+                <label class="feedback__label" for="phone">Мобильный телефон</label>
               </div>
               <div class="feedback__input-box">
                 <input class="feedback__input" type="text" name="theme" id="theme" autocomplete="off">
@@ -210,7 +209,7 @@
     <footer class="footer">
       <div class="footer__firma">@ OOO "МКЦ Адонис", 2018</div>
       <a class="footer__link" href="docs/conf.pdf" target="_blank">Политика конфиденциальности</a>
-      <a class="footer__link" href="">Разработка Zalman Group</a>
+      <a class="footer__link" href="http://www.zalman-group.com">Разработка Zalman Group</a>
     </footer>
 
     <script src="js/all.min.js"></script>

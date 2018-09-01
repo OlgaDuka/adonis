@@ -181,28 +181,6 @@
   }
 }
 
-/*************** -- mask -- *******************/
-
-.modal__phone--hidden {
-  display: none;
-}
-
-.modal__input-box--tel {
-  position: relative;
-}
-
-.modal__phone--visible {
-  position: relative;
-  width: 100%;
-  color: $magenta-bright-text;
-}
-
-.modal__input-box--tel .modal__phone--mask {
-  position: absolute;
-  width: 100%;
-  color: rgba(0, 0, 0, 0.25);
-}
-
 /*************** -- fix ie11-input -- *******************/
 input::-ms-clear {
   display: none;

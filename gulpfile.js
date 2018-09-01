@@ -22,10 +22,7 @@ var ghPages = require('gulp-gh-pages');
 var listJsFiles = [
   'source/js/jquery.min.js',
   'source/js/wow.min.js',
-  'source/js/jquery.maskedinput.js',
   'source/js/jquery.validate.js',
-  'source/js/cleave.js',
-  'source/js/phone-mask.js',
   'source/js/custom.js'
 ];
 

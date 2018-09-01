@@ -58,6 +58,7 @@
   font-size: 14px;
   color: $black-title;
   text-decoration: none;
+  outline: none;
 
   &--conf {
     font-size: 13px;
@@ -115,7 +116,6 @@
   }
 }
 
-.feedback__phone,
 .feedback__input {
   margin: 0 auto;
   width: 100%;
@@ -245,40 +245,10 @@
   text-align: right;
 }
 
-.feedback__input-box .feedback__phone:focus ~ span,
-.feedback__phone--not-empty ~ span {
-  top: -12px;
-  right: 4px;
-  font-size: 8px;
-  line-height: 15px;
-  text-transform: uppercase;
-  text-align: right;
-}
-
-.feedback__input-box .feedback__phone {
-  color: transparent;
-}
-
-.feedback__input-box .feedback__phone:focus,
-.feedback__input-box .feedback__phone--not-empty {
-  color: $gray-text;
-}
-
 .feedback__input-box input,
 .feedback__input-box .feedback__input--textarea {
   outline: none;
 }
-
-/* .feedback__input-box .feedback__input:focus ~ .feedback__message,
-.feedback__input-box .feedback__phone:focus ~ .feedback__message {
-  display: none;
-}
-
-.feedback__input-box .feedback__input:focus ~ .feedback__btn,
-.feedback__input-box .feedback__phone:focus ~ .feedback__btn {
-  background-color: $black-title;
-  opacity: 1;
-} */
 
 .feedback__input-box input:-webkit-autofill {
   border: 1px solid transparent;
@@ -288,49 +258,6 @@
 
 .feedback__input-box input:-webkit-autofill ~ label {
   color: $gray-text;
-}
-
-/*.feedback__message-close {
-  align-self: center;
-
-  @include heliosc-regular;
-  color: $blue-text;
-  font-size: 16px;
-  line-height: 25px;
-
-  border: none;
-  outline: 1px solid transparent;
-  background-color: transparent;
-  background-image: linear-gradient(rgba($blue-text, 0.25), rgba($blue-text, 0.25));
-  background-position: 0 1.31em;
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  cursor: pointer;
-
-  &:hover {
-    color: $orange-bg;
-    background-image: linear-gradient(rgba($orange-bg, 0.25), rgba($orange-bg, 0.25));
-  }
-} */
-
-/*************** -- mask -- *******************/
-
-.feedback__phone--hidden {
-  display: none;
-}
-
-.feedback__input-box--tel {
-  position: relative;
-}
-
-.feedback__phone--visible {
-  position: relative;
-  color: $magenta-bright-text;
-}
-
-.feedback__input-box .feedback__phone--mask {
-  position: absolute;
-  color: rgba(0, 0, 0, 0.25);
 }
 
 /*************** -- fix ie11-input -- *******************/

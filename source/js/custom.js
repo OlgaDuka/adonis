@@ -42,15 +42,11 @@ $(document).ready(function () {
   };
 
   var resetPopup = function () {
-    $('.modal__phone--mask').addClass('modal__phone--hidden');
-    $('.modal__phone--visible').removeClass('modal__phone--not-empty');
     $('.modal__wrapper--order').hide();
     $('.modal__wrapper--message').css('display', 'flex');
   };
 
   var resetFeedback = function () {
-    $('.feedback__phone--mask').addClass('feedback__phone--hidden');
-    $('.feedback__phone--visible').removeClass('feedback__phone--not-empty');
     $('.feedback__input').each(function (i, el) {
       $(el).removeClass('feedback__input--not-empty');
     });
