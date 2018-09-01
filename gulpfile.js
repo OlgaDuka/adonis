@@ -137,7 +137,7 @@ gulp.task("serve", function() {
 
 gulp.task("build", function (done) {
   run(
-    "clean",
+//    "clean",
     "copy",
     "style",
     "js",
